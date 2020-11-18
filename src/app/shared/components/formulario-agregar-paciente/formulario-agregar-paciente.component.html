@@ -1,0 +1,157 @@
+<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">-->
+<form (ngSubmit)="onSubmit()" class="px-4 pt-3">
+    <h1>Agregar Nuevo Paciente</h1>
+    <div class="dropdown-divider  border-secundary"></div>
+    <div class="container-fluid">
+        <!--container-->
+        <div id='formulario' [ngClass]="{lleno: mensaje}">
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col nombre-->
+                    <label for="nombres">Nombres(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="nombres" name='nombres' class="form-control" type="text" formControlName="nombres" placeholder="Nombres">
+                        <div id='mensaje'>
+                            <small id="nombreoHelp" class="form-text text-muted" *ngIf="(nombres.dirty || nombres.touched) && nombres.invalid && nombres.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col nombre-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col apellido-->
+                    <label for="apellidos">Apellidos(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="apellidos" name='apellidos' class="form-control" type="text" formControlName="apellidos" placeholder="Apellidos">
+                        <div id='mensaje'>
+                            <small id="ApellidoHelp" class="form-text text-muted" *ngIf="(apellidos.dirty || apellidos.touched) && apellidos.invalid && apellidos.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col apellido-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col rut-->
+                    <label for="rut">Rut(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="rut" name='rut' class="form-control" type="text" formControlName="rut" placeholder="Rut">
+                        <div id='mensaje'>
+                            <small id="rutHelp" class="form-text text-muted" *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col rut-->
+            </div>
+            <!--row-->
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col fecha Nac-->
+                    <label for="fechaNac">Fecha de Nacimiento(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="fechaNac" name='fechaNac' class="form-control" type="text" formControlName="fechaNac" placeholder="00/00/0000">
+                        <div id='mensaje'>
+                            <small id="fechaNacHelp" class="form-text text-muted" *ngIf="(fechaNac.dirty || fechaNac.touched) && fechaNac.invalid && fechaNac.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col fecha Nac-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col sexo-->
+                    <label for="sexo">Sexo(*)</label>
+                    <select id="sexo" name='sexo' class="form-control" type="text" formControlName="sexo" placeholder="sexo">
+                        <option></option>
+                        <option>Hombre</option>
+                        <option>Mujer</option>
+                        <option>No Binario</option>
+                        <option>Helicoptero</option>
+                        <option>Sin Especificar</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="sexoHelp" class="form-text text-muted" *ngIf="(sexo.dirty || sexo.touched) && sexo.invalid && sexo.errors.required"> Requerido  </small>
+                    </div>
+                </div>
+                <!--col sexo-->
+                <div class="col-lg-5 col-12 my-2">
+                    <!--col direccion-->
+                    <label for="direccion">Direccion(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="direccion" name='direccion' class="form-control" type="text" formControlName="direccion" placeholder="Direccion">
+                        <div id='mensaje'>
+                            <small id="direccionHelp" class="form-text text-muted" *ngIf="(direccion.dirty || direccion.touched) && direccion.invalid && direccion.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col direccion-->
+            </div>
+            <!--row-->
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col edad-->
+                    <label for="edad">Edad(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="edad" name='edad' class="form-control" type="text" formControlName="edad" placeholder="Edad">
+                        <div id='mensaje'>
+                            <small id="edadHelp" class="form-text text-muted" *ngIf="(edad.dirty || edad.touched) && edad.invalid && edad.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col edad-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col nacionalidad-->
+                    <label for="nacionalidad">Nacionalidad(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="nacionalidad" name='nacionalidad' class="form-control" type="text" formControlName="nacionalidad" placeholder="Nacionalidad">
+                        <div id='mensaje'>
+                            <small id="nacionalidadHelp" class="form-text text-muted" *ngIf="(nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col nacionalidad-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col Ciudad-->
+                    <label for="ciudad">Ciudad(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="ciudad" name='ciudad' class="form-control" type="text" formControlName="ciudad" placeholder="ciudad">
+                        <div id='mensaje'>
+                            <small id="ciudadHelp" class="form-text text-muted" *ngIf="(ciudad.dirty || ciudad.touched) && ciudad.invalid && ciudad.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col Ciudad-->
+            </div>
+            <!--row-->
+            <!--boton agregar-->
+            <div [ngSwitch]="getUrl()">
+                <div *ngSwitchCase="'/user/paciente'">
+                    <!--<button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>-->
+                    <button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit">Siguiente</button>
+                </div>
+                <div *ngSwitchCase="'/adm/paciente'">
+                    <!--<button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>-->
+                    <button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit">Siguiente</button>
+                </div>
+                <label for=""> (*) Campo Obligatorio</label>
+            </div>
+            <!--boton agregar-->
+            <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+        </div>
+    </div>
+    <!--container-->
+</form>

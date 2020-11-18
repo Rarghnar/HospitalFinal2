@@ -1,0 +1,16 @@
+form {
+  text-align: center;
+}
+form h1 {
+  font-size: 20px;
+}
+form #mensaje {
+  clear: both;
+  width: 100%;
+}
+form #mensaje .text-muted {
+  color: red !important;
+}
+form .lleno {
+  visibility: hidden;
+}

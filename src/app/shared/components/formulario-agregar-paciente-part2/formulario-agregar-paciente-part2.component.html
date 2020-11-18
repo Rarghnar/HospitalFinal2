@@ -1,0 +1,243 @@
+<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">-->
+<form (ngSubmit)="onSubmit()" class="px-4 pt-3">
+
+    <h1>Agregar Nuevo Paciente</h1>
+    <div class="dropdown-divider  border-secundary"></div>
+
+    <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+
+
+    <div class="container-fluid">
+        <!--container-->
+        <div id='formulario' [ngClass]="{lleno: mensaje}">
+            <h2>Información del Doctor</h2>
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col nombre-->
+                    <label for="nombres">Nombres(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="nombres" name='nombres' class="form-control" type="text" formControlName="nombres" placeholder="Nombres">
+                        <div id='mensaje'>
+                            <small id="nombreoHelp" class="form-text text-muted" *ngIf="(nombres.dirty || nombres.touched) && nombres.invalid && nombres.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col nombre-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col apellido-->
+                    <label for="apellidos">Apellidos(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="apellidos" name='apellidos' class="form-control" type="text" formControlName="apellidos" placeholder="Apellidos">
+                        <div id='mensaje'>
+                            <small id="ApellidoHelp" class="form-text text-muted" *ngIf="(apellidos.dirty || apellidos.touched) && apellidos.invalid && apellidos.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col apellido-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col rut-->
+                    <label for="rut">Rut(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="rut" name='rut' class="form-control" type="text" formControlName="rut" placeholder="Rut">
+                        <div id='mensaje'>
+                            <small id="rutHelp" class="form-text text-muted" *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col rut-->
+            </div>
+            <!--row-->
+            <div class="dropdown-divider  border-secundary"></div>
+            <h2>Tipo de Atención</h2>
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col atencion-->
+                    <label for="atencion">Atención Medica(*)</label>
+                    <select id="atencion" name='atencion' class="form-control" type="text" formControlName="atencion" placeholder="Atencion">
+                        <option></option>
+                        <option>Hospitalizar</option>
+                        <option>Urgencia</option>
+                        <option>Revisión</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="atencionHelp" class="form-text text-muted" *ngIf="(atencion.dirty || atencion.touched) && atencion.invalid && atencion.errors.required"> Requerido  </small>
+                    </div>
+                </div>
+                <!--col atencion-->
+                <div class="col-lg-7 col-12 my-2">
+                    <!--col motivo-->
+                    <label for="motivo">Motivo(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="motivo" name='motivo' class="form-control" type="text" formControlName="motivo" placeholder="Motivo">
+                        <div id='mensaje'>
+                            <small id="motivoHelp" class="form-text text-muted" *ngIf="(motivo.dirty || motivo.touched) && motivo.invalid && motivo.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col motivo-->
+            </div>
+            <!--row-->
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col fecha-->
+                    <label for="fechaIng">Fecha Ingreso(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="fechaIng" name='fechaIng' class="form-control" type="text" formControlName="fechaIng" placeholder="Fecha 00/00">
+                        <div id='mensaje'>
+                            <small id="fechaIngHelp" class="form-text text-muted" *ngIf="(fechaIng.dirty || fechaIng.touched) && fechaIng.invalid && fechaIng.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col fecha-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col Hora Ingreso-->
+                    <label for="horaIng">Hora Ingreso(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="horaIng" name='horaIng' class="form-control" type="text" formControlName="horaIng" placeholder="Hora Ingreso">
+                        <div id='mensaje'>
+                            <small id="horaIngHelp" class="form-text text-muted" *ngIf="(horaIng.dirty || horaIng.touched) && horaIng.invalid && horaIng.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col Hora Ingreso-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col fecha-->
+                    <label for="fechaSal">Fecha Salida</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="fechaSal" name='fechaSal' class="form-control" type="text" formControlName="fechaSal" placeholder="Fecha 00/00">
+                        <div id='mensaje'>
+                            <small id="fechaSalHelp" class="form-text text-muted" *ngIf="(fechaSal.dirty || fechaSal.touched) && fechaSal.invalid && fechaSal.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col fecha-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col Hora Ingreso-->
+                    <label for="horaSal">Hora Salida</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="horaSal" name='horaSal' class="form-control" type="text" formControlName="horaSal" placeholder="Hora Salida">
+                        <div id='mensaje'>
+                            <small id="horaSalHelp" class="form-text text-muted" *ngIf="(horaSal.dirty || horaSal.touched) && horaSal.invalid && horaSal.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col Hora Ingreso-->
+            </div>
+            <!--row-->
+            <div class="dropdown-divider  border-secundary"></div>
+            <h2>Habitaciones</h2>
+            <!--Habitaciones-->
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col piso-->
+                    <label for="piso">Piso(*)</label>
+                    <select id="piso" name='piso' class="form-control" type="text" formControlName="piso" placeholder="Piso">
+                        <option></option>
+                        <option>Piso 1</option>
+                        <option>Piso 2</option>
+                        <option>Piso 3</option>
+                        <option>Piso 4</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="pisoHelp" class="form-text text-muted" *ngIf="(piso.dirty || piso.touched) && piso.invalid && piso.errors.required"> Requerido  </small>
+                    </div>
+                </div>
+                <!--col piso-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col habitacion-->
+                    <label for="habitacion">Habitación(*)</label>
+                    <select id="habitacion" name='habitacion' class="form-control" type="text" formControlName="habitacion" placeholder="habitacion">
+                        <option></option>
+                        <option>Habitación 101</option>
+                        <option>Habitación 203</option>
+                        <option>Habitación 204</option>
+                        <option>Habitación 302</option>
+                        <option>Habitación 303</option>
+                        <option>Habitación 306</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="habitacionHelp" class="form-text text-muted" *ngIf="(habitacion.dirty || habitacion.touched) && habitacion.invalid && habitacion.errors.required"> Requerido  </small>
+                    </div>
+                </div>
+                <!--col piso-->
+                <div class="col-lg-7 col-12 my-2">
+                    <!--col causa-->
+                    <label for="causa">Causa(*)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="causa" name='causa' class="form-control" type="text" formControlName="causa" placeholder="Causa">
+                        <div id='mensaje'>
+                            <small id="causaHelp" class="form-text text-muted" *ngIf="(causa.dirty || causa.touched) && causa.invalid && causa.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col causa-->
+            </div>
+            <!--row-->
+            <!--habitaciones-->
+            <!--boton agregar-->
+            <div [ngSwitch]="getUrl()">
+                <div *ngSwitchCase="'/user/paciente2'">
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <!--<button class="btn btn-primary my-3 mx-3" type="submit" [disabled]="!checkoutForm.valid">Agregar</button>-->
+                            <button class="btn btn-primary my-3 mx-3" type="submit">Agregar</button>
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-warning my-3 mx-3" (click)="navegarAtras()"> Atras</button>
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-danger my-3 mx-3" (click)="navegarCancelar()"> Cancelar</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'/adm/paciente2'">
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <!--<button class="btn btn-primary my-3 mx-3" type="submit" [disabled]="!checkoutForm.valid">Agregar</button>-->
+                            <button class="btn btn-primary my-3 mx-3" type="submit">Agregar</button>
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-warning my-3 mx-3" (click)="navegarAtrasAdmin()"> Atras</button>
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-danger my-3 mx-3" (click)="navegarCancelarAdmin()"> Cancelar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--boton agregar-->
+        </div>
+        <label for=""> (*) Campo Obligatorio</label>
+
+    </div>
+    <!--container-->
+</form>

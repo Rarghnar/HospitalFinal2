@@ -1,0 +1,183 @@
+<!--agregar ng switch-->
+<div [ngSwitch]="getUrl()">
+    <div *ngSwitchCase="'/visitor/home'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-3x" style="color: azure;"> </i>
+            <a class="navbar-brand" href="/visitor/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-2x" style="color: azure;"></i>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/visitor/home">Inicio</a>
+                    </li>
+                    <i class="fas fa-phone fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/visitor/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="fas fa-search fa-2x mr-2"></i>
+                    </li>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                </form>
+                <i class="fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="nav-item ml-2">
+                    <a class="btn btn-outline-info my-2 my-sm-0 nav-link" href="/visitor/iniciar-sesion">Iniciar Sesión</a>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/visitor/contactos'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-3x" style="color: azure;"> </i>
+            <a class="navbar-brand" href="/visitor/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-2x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/home">Inicio</a>
+                    </li>
+                    <i class="fas fa-phone fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="/visitor/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="fas fa-search fa-2x mr-2"></i>
+                    </li>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                </form>
+                <i class="fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="nav-item ml-2">
+                    <a class="btn btn-outline-info my-2 my-sm-0 nav-link" href="/visitor/iniciar-sesion">Iniciar Sesión</a>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/visitor/acerca-de'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-3x" style="color: azure;"> </i>
+            <a class="navbar-brand" href="/visitor/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-2x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/home">Inicio</a>
+                    </li>
+                    <i class="fas fa-phone fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/visitor/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/visitor/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="fas fa-search fa-2x mr-2"></i>
+                    </li>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                </form>
+                <i class="fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="nav-item ml-2">
+                    <a class="btn btn-outline-info my-2 my-sm-0 nav-link" href="/visitor/iniciar-sesion">Iniciar Sesión</a>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/visitor/iniciar-sesion'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-3x" style="color: azure;"> </i>
+            <a class="navbar-brand" href="/visitor/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-2x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/home">Inicio</a>
+                    </li>
+                    <i class="fas fa-phone fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/visitor/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="fas fa-search fa-2x mr-2"></i>
+                    </li>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                </form>
+                <i class="fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="nav-item ml-2">
+                    <a class="btn btn-outline-info my-2 my-sm-0 nav-link" href="/visitor/iniciar-sesion">Iniciar Sesión</a>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/screen-recuperar-pass'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-3x" style="color: azure;"> </i>
+            <a class="navbar-brand" href="/visitor/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-2x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/home">Inicio</a>
+                    </li>
+                    <i class="fas fa-phone fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/visitor/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-2x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visitor/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="fas fa-search fa-2x mr-2"></i>
+                    </li>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                </form>
+                <i class="fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="nav-item ml-2">
+                    <a class="btn btn-outline-info my-2 my-sm-0 nav-link" href="/visitor/iniciar-sesion">Iniciar Sesión</a>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+</div>

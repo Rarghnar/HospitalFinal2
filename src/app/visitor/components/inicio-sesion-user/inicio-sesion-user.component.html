@@ -1,0 +1,35 @@
+<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">-->
+<form (ngSubmit)="onSubmit()" class="px-4 pt-3">
+    <h1>General</h1>
+    <div class="dropdown-divider  border-primary"></div>
+    <div id='formulario' [ngClass]="{lleno: mensaje}">
+        <label for="usuario">Usuario Email</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            </div>
+            <input id="usuario" name='usuario' class="form-control" type="email" formControlName="usuario" placeholder="email@example.com">
+            <div id='mensaje'>
+                <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.required"> Requerido  </small>
+                <small id="emailHelp" class="form-text text-muted" *ngIf="(usuario.dirty || usuario.touched) && usuario.invalid && usuario.errors.pattern">Formato email requerido</small>
+            </div>
+        </div>
+        <label for="usuario" style="padding-top: 20px;">Contraseña</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            </div>
+            <input id="password" class="form-control" type="password" formControlName="password" placeholder="Contraseña">
+            <div id='mensaje'>
+                <small id="emailHelp" class="form-text text-muted" *ngIf="(password.dirty || password.touched) && password.invalid && password.errors.required"> Requerido </small>
+            </div>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+            <label class="form-check-label" for="dropdownCheck">
+                Recordarme
+            </label>
+        </div>
+        <button class="btn btn-primary mt-3" (click)="navegarInicio()" type="submit" [disabled]="!checkoutForm.valid">Iniciar Sesión</button>
+        <div class="dropdown-divider  border-primary"></div>
+        <a class="dropdown-item" href="screen-recuperar-pass">¿Has Olvidado Tu Contraseña?</a>
+    </div>
+</form>
