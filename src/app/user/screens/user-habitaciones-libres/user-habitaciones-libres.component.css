@@ -1,0 +1,30 @@
+form {
+  text-align: center;
+  width: 100%;
+}
+form h3 {
+  font-size: 14px;
+}
+form input {
+  width: 30%;
+}
+form .ng-touched {
+  background-color: lightgreen;
+}
+form #mensaje {
+  clear: both;
+  width: 100%;
+}
+form #mensaje .text-muted {
+  color: red !important;
+}
+form #informacion ul {
+  list-style-type: none;
+}
+form #informacion ul li {
+  float: left;
+  margin: 10px;
+}
+form .lleno {
+  visibility: hidden;
+}

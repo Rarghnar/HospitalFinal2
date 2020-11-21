@@ -1,5 +1,4 @@
-<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">-->
-<form (ngSubmit)="onSubmit()" class="px-4 pt-3">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">
     <h1>Agregar Nuevo Paciente</h1>
     <div class="dropdown-divider  border-secundary"></div>
     <div class="container-fluid">
@@ -140,12 +139,10 @@
             <!--boton agregar-->
             <div [ngSwitch]="getUrl()">
                 <div *ngSwitchCase="'/user/paciente'">
-                    <!--<button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>-->
-                    <button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit">Siguiente</button>
+                    <button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>
                 </div>
                 <div *ngSwitchCase="'/adm/paciente'">
-                    <!--<button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>-->
-                    <button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit">Siguiente</button>
+                    <button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>
                 </div>
                 <label for=""> (*) Campo Obligatorio</label>
             </div>
