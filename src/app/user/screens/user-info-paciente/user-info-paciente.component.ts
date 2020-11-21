@@ -14,7 +14,7 @@ export class UserInfoPacienteComponent implements OnInit {
   public paciente: Paciente;
 
   constructor(private pacienteService: PacienteService, private activedroute: ActivatedRoute) {
-    this.id = activedroute.snapshot.params['is'];
+    this.id = activedroute.snapshot.params['id'];
    }
 
   ngOnInit(): void {

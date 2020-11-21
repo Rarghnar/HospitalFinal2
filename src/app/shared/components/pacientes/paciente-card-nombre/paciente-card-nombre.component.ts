@@ -17,15 +17,7 @@ export class PacienteCardNombreComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navegarinfo1() {
-    this.router.navigate(['/user/paciente']);
-  }
-
-  naviegarinfo2() {
-    this.router.navigate(['/adm/paciente']);
-  }
-
-  public getUrl(): String {
+  public getUrl(): string {
     return this.router.url;
   }
 }

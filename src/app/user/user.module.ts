@@ -14,6 +14,7 @@ import { UserInfoPacienteComponent } from './screens/user-info-paciente/user-inf
 import { UserPaciente2Component } from './screens/user-paciente2/user-paciente2.component';
 import { SidebarUserComponent } from './components/sidebar-user/sidebar-user.component';
 import { UserHomeScreenComponent } from './screens/user-home-screen/user-home-screen.component';
+import { UserCheckearPacienteComponent } from './screens/user-checkear-paciente/user-checkear-paciente.component';
 
 const component = [
   UserComponent, UserAcercaDeComponent, UserContactosComponent, UserHabitacionesOcupadasComponent,
@@ -28,6 +29,6 @@ const component = [
     UserRoutingModule,
     SharedModule,
   ],
-  declarations: [...component]
+  declarations: [...component, UserCheckearPacienteComponent]
 })
 export class UserModule { }

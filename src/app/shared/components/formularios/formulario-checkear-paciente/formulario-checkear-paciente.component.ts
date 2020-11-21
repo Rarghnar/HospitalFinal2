@@ -4,12 +4,13 @@ import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angula
 
 
 @Component({
-  selector: 'shared-formulario-agregar-paciente',
-  templateUrl: './formulario-agregar-paciente.component.html',
-  styleUrls: ['./formulario-agregar-paciente.component.less']
+  selector: 'shared-formulario-checkear-paciente',
+  templateUrl: './formulario-checkear-paciente.component.html',
+  styleUrls: ['./formulario-checkear-paciente.component.less']
 })
-export class FormularioAgregarPacienteComponent implements OnInit {
+export class FormularioCheckearPacienteComponent implements OnInit {
 
+ 
   checkoutForm: FormGroup;
   mensaje:string="";
   isDivVisible=false;
@@ -61,6 +62,5 @@ export class FormularioAgregarPacienteComponent implements OnInit {
   get edad() { return this.checkoutForm.get('edad');}
   get nacionalidad() { return this.checkoutForm.get('nacionalidad');}
   get ciudad() { return this.checkoutForm.get('ciudad');}
-
 
 }

@@ -1,5 +1,5 @@
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">
-    <h1>Agregar Nuevo Paciente</h1>
+    <h1>Checkear Paciente</h1>
     <div class="dropdown-divider  border-secundary"></div>
     <div class="container-fluid">
         <!--container-->
@@ -69,8 +69,6 @@
                         <option></option>
                         <option>Hombre</option>
                         <option>Mujer</option>
-                        <option>No Binario</option>
-                        <option>Helicoptero</option>
                         <option>Sin Especificar</option>                        
                     </select>
                     <div id='mensaje'>
@@ -111,13 +109,17 @@
                 <div class="col-lg-2 col-12 my-2">
                     <!--col nacionalidad-->
                     <label for="nacionalidad">Nacionalidad(*)</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                        </div>
-                        <input id="nacionalidad" name='nacionalidad' class="form-control" type="text" formControlName="nacionalidad" placeholder="Nacionalidad">
-                        <div id='mensaje'>
-                            <small id="nacionalidadHelp" class="form-text text-muted" *ngIf="(nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.required"> Requerido  </small>
-                        </div>
+
+                    <select id="nacionalidad" name='nacionalidad' class="form-control" type="text" formControlName="nacionalidad" placeholder="Nacionalidad">
+                        <option></option>
+                        <option>Chilena</option>
+                        <option>Extranjera</option>
+                        <option>No Binario</option>
+                        <option>Helicoptero</option>
+                        <option>Sin Especificar</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="nacionalidadHelp" class="form-text text-muted" *ngIf="(nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.required"> Requerido  </small>
                     </div>
                 </div>
                 <!--col nacionalidad-->
