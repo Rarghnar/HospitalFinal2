@@ -1,5 +1,4 @@
-<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">-->
-<form (ngSubmit)="onSubmit()" class="px-4 pt-3">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">
     <h1>Agregar Nuevo Paciente</h1>
     <div class="dropdown-divider  border-secundary"></div>
     <div class="container-fluid">
@@ -33,7 +32,7 @@
                     </div>
                 </div>
                 <!--col apellido-->
-                <div class="col-lg-3 col-12 my-2">
+                <div class="col-lg-2 col-12 my-2">
                     <!--col rut-->
                     <label for="rut">Rut(*)</label>
                     <div class="input-group">
@@ -52,18 +51,18 @@
                 <!--row-->
                 <div class="col-lg-3 col-12 my-2">
                     <!--col fecha Nac-->
-                    <label for="fechaNac">Fecha de Nacimiento(*)</label>
+                    <label for="fechaNac"></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input id="fechaNac" name='fechaNac' class="form-control" type="text" formControlName="fechaNac" placeholder="00/00/0000">
+                        <input id="fechaNac" name='fechaNac' class="form-control" type="text" formControlName="fechaNac" placeholder="Año">
                         <div id='mensaje'>
                             <small id="fechaNacHelp" class="form-text text-muted" *ngIf="(fechaNac.dirty || fechaNac.touched) && fechaNac.invalid && fechaNac.errors.required"> Requerido  </small>
                         </div>
                     </div>
                 </div>
                 <!--col fecha Nac-->
-                <div class="col-lg-2 col-12 my-2">
+                <div class="col-lg-2 col-12 my-6">
                     <!--col sexo-->
                     <label for="sexo">Sexo(*)</label>
                     <select id="sexo" name='sexo' class="form-control" type="text" formControlName="sexo" placeholder="sexo">
@@ -79,7 +78,7 @@
                     </div>
                 </div>
                 <!--col sexo-->
-                <div class="col-lg-5 col-12 my-2">
+                <div class="col-lg-5 col-12 my-6">
                     <!--col direccion-->
                     <label for="direccion">Direccion(*)</label>
                     <div class="input-group">
@@ -109,29 +108,86 @@
                     </div>
                 </div>
                 <!--col edad-->
+
                 <div class="col-lg-2 col-12 my-2">
                     <!--col nacionalidad-->
                     <label for="nacionalidad">Nacionalidad(*)</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                        </div>
-                        <input id="nacionalidad" name='nacionalidad' class="form-control" type="text" formControlName="nacionalidad" placeholder="Nacionalidad">
-                        <div id='mensaje'>
-                            <small id="nacionalidadHelp" class="form-text text-muted" *ngIf="(nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.required"> Requerido  </small>
-                        </div>
+                    <select id="nacionalidad" name='nacionalidad' class="form-control" type="text" formControlName="nacionalidad" placeholder="Nacionalidad">
+                        <option></option>
+                        <option>Chilena</option>
+                        <option>Extranjera</option>
+                        <option>Sin informacion</option>                       
+                    </select>
+                    <div id='mensaje'>
+                        <small id="nacionalidadHelp" class="form-text text-muted" *ngIf="(nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.required"> Requerido  </small>
                     </div>
                 </div>
+
                 <!--col nacionalidad-->
                 <div class="col-lg-2 col-12 my-2">
                     <!--col Ciudad-->
-                    <label for="ciudad">Ciudad(*)</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                        </div>
-                        <input id="ciudad" name='ciudad' class="form-control" type="text" formControlName="ciudad" placeholder="ciudad">
-                        <div id='mensaje'>
-                            <small id="ciudadHelp" class="form-text text-muted" *ngIf="(ciudad.dirty || ciudad.touched) && ciudad.invalid && ciudad.errors.required"> Requerido  </small>
-                        </div>
+                    <label for="ciudad">Provincia(*)</label>
+                    <select id="ciudad" name='cuidad' class="form-control" type="text" formControlName="cuidad" placeholder="cuidad">
+                        <option></option>
+                        <option>Valparaiso</option> 
+                        <option>Santiago</option>  
+                        <option>Angol</option>
+                        <option>Antofagasta</option>
+                        <option>Arica</option>
+                        <option>Bulnes</option>
+                        <option>Calama</option>
+                        <option>Castro</option>  
+                        <option>Cauquenes</option>  
+                        <option>Chaitén</option>  
+                        <option>Chañaral</option>  
+                        <option>Chile Chico</option>  
+                        <option>Cochrane</option>  
+                        <option>Colina</option>  
+                        <option>Concepción</option>  
+                        <option>Copiapó</option>  
+                        <option>Coquimbo</option>  
+                        <option>La serena</option>  
+                        <option>Coyhaique</option>  
+                        <option>Curicó</option>  
+                        <option>Hangan Roa</option>  
+                        <option>Illapel</option>  
+                        <option>Iquique</option>  
+                        <option>La Ligua</option>  
+                        <option>La Unión</option>
+                        <option>Lebu</option>  
+                        <option>Linares</option>  
+                        <option>Los Andes</option>  
+                        <option>Los Ángeles</option>  
+                        <option>Melipilla</option>  
+                        <option>Osorno</option>  
+                        <option>Ovalle</option>  
+                        <option>Pichilemu</option>  
+                        <option>Porvenir</option>  
+                        <option>Pozo Almonte</option>  
+                        <option>Puente alto</option>  
+                        <option>Puerto Aysen</option>  
+                        <option>Puerto Montt</option>  
+                        <option>Puerto Natales</option>
+                        <option>Puerto Williams</option>  
+                        <option>Punta Arenas</option>  
+                        <option>Putre</option>  
+                        <option>Quillota</option>  
+                        <option>Quilpue</option>  
+                        <option>Quirihue</option>  
+                        <option>Rancagua</option>  
+                        <option>San Antonio</option>  
+                        <option>San Bernardo</option>  
+                        <option>San Carlos</option>  
+                        <option>San Felipe</option>  
+                        <option>San Fernando</option>  
+                        <option>Talagante</option>
+                        <option>Talca</option>  
+                        <option>Tocopilla</option>  
+                        <option>Vallenar</option>  
+                                                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="cuidadHelp" class="form-text text-muted" *ngIf="(ciudad.dirty || ciudad.touched) && ciudad.invalid && ciudad.errors.required"> Requerido  </small>
                     </div>
                 </div>
                 <!--col Ciudad-->
@@ -140,12 +196,10 @@
             <!--boton agregar-->
             <div [ngSwitch]="getUrl()">
                 <div *ngSwitchCase="'/user/paciente'">
-                    <!--<button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>-->
-                    <button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit">Siguiente</button>
+                    <button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>
                 </div>
                 <div *ngSwitchCase="'/adm/paciente'">
-                    <!--<button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>-->
-                    <button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit">Siguiente</button>
+                    <button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>
                 </div>
                 <label for=""> (*) Campo Obligatorio</label>
             </div>

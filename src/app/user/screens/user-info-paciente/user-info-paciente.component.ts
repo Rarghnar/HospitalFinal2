@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Paciente } from '@core/models/paciente.model';
+import { PacienteService } from '../../../core/services/paciente/paciente.service';
 
 @Component({
   selector: 'app-user-info-paciente',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInfoPacienteComponent implements OnInit {
 
-  constructor() { }
+  public id: number;
+  public paciente: Paciente;
+
+  constructor(private pacienteService: PacienteService, private activedroute: ActivatedRoute) {
+    this.id = activedroute.snapshot.params['is'];
+   }
 
   ngOnInit(): void {
+    this.paciente = this.pacienteService.getPacienteById(this.id);
   }
 
 }

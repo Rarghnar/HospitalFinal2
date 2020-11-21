@@ -1,0 +1,19 @@
+<div class="card mb-2">
+    <div class="card-body mb-1">
+        <div class="row ">
+            <div class="col-lg-12 col-12 text-center">
+                <p class="font-weight-bold">{{paciente.nombre}}</p>
+                <p class="font-weight-bold">Cama: {{paciente.habitacion}}</p>
+                <div class="col-lg-12 col-12">
+                    <div [ngSwitch]="getUrl()">
+                        <div *ngSwitchCase="'/user/lista-paciente'">
+                            <!--<button type="button" class="btn btn-outline-success" [routerLink]="['/screen-info-paciente', paciente._id]">Ver paciente</button>-->
+                        </div>
+                        <div *ngSwitchCase="'/adm/lista-paciente'">
+                            <!--<button type="button" class="btn btn-outline-success" [routerLink]="['/screen-info-paciente-admin', paciente._id]">Ver paciente</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

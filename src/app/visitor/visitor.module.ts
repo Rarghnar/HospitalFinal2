@@ -22,6 +22,7 @@ const component = [
     CommonModule,
     VisitorRoutingModule,
     SharedModule,
+    ReactiveFormsModule
   ],
   declarations: [...component ]
 })
