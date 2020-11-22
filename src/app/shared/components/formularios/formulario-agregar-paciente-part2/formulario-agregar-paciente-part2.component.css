@@ -1,0 +1,31 @@
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+h2 {
+  font-size: 20px;
+}
+.ng-touched {
+  background-color: #ffffff;
+}
+#mensaje {
+  clear: both;
+  width: 100%;
+}
+#mensaje .text-muted {
+  color: red !important;
+}
+.lleno {
+  visibility: hidden;
+}
+.aster {
+  color: red;
+}
+.boton1 {
+  background-color: #aaa9ac !important;
+  color: white;
+}
+.boton2 {
+  background-color: #c07f7f !important;
+  color: white;
+}

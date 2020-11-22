@@ -24,7 +24,8 @@ const compoment = [
   AdmComponent ,AdmAcercaDeComponent, AdmContactosComponent, AdmHabitacionesLibresComponent,
   AdmHabitacionesOcupadasComponent, AdmHomeScreenComponent, AdmInfoPacienteComponent,
   AdmListaPacienteComponent, AdmPacienteComponent, AdmPaciente2Component,
-  SidebarAdmComponent, AdmRegistrarEnferComponent, AdmRegistrarMedicComponent
+  SidebarAdmComponent, AdmRegistrarEnferComponent, AdmRegistrarMedicComponent,
+  RegistrarEnferComponent, RegistrarMedicComponent
 ]
 
 @NgModule({
@@ -33,7 +34,7 @@ const compoment = [
     AdmRoutingModule,
     SharedModule,
   ],
-  declarations: [...compoment, RegistrarEnferComponent, RegistrarMedicComponent]
+  declarations: [...compoment]
 
 })
 export class AdmModule { }

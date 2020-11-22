@@ -14,7 +14,7 @@
                 <!--row-->
                 <div class="col-lg-3 col-12 my-2">
                     <!--col nombre-->
-                    <label for="nombres">Nombres(*)</label>
+                    <label for="nombres">Nombres<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
@@ -27,7 +27,7 @@
                 <!--col nombre-->
                 <div class="col-lg-3 col-12 my-2">
                     <!--col apellido-->
-                    <label for="apellidos">Apellidos(*)</label>
+                    <label for="apellidos">Apellidos<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
@@ -40,7 +40,7 @@
                 <!--col apellido-->
                 <div class="col-lg-3 col-12 my-2">
                     <!--col rut-->
-                    <label for="rut">Rut(*)</label>
+                    <label for="rut">Rut<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
@@ -59,7 +59,7 @@
                 <!--row-->
                 <div class="col-lg-3 col-12 my-2">
                     <!--col atencion-->
-                    <label for="atencion">Atención Medica(*)</label>
+                    <label for="atencion">Atención Medica<span class="aster">*</span></label>
                     <select id="atencion" name='atencion' class="form-control" type="text" formControlName="atencion" placeholder="Atencion">
                         <option></option>
                         <option>Hospitalizar</option>
@@ -73,7 +73,7 @@
                 <!--col atencion-->
                 <div class="col-lg-7 col-12 my-2">
                     <!--col motivo-->
-                    <label for="motivo">Motivo(*)</label>
+                    <label for="motivo">Motivo<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
@@ -90,7 +90,7 @@
                 <!--row-->
                 <div class="col-lg-2 col-12 my-2">
                     <!--col fecha-->
-                    <label for="fechaIng">Fecha Ingreso(*)</label>
+                    <label for="fechaIng">Fecha Ingreso<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
@@ -103,7 +103,7 @@
                 <!--col fecha-->
                 <div class="col-lg-2 col-12 my-2">
                     <!--col Hora Ingreso-->
-                    <label for="horaIng">Hora Ingreso(*)</label>
+                    <label for="horaIng">Hora Ingreso<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
@@ -120,10 +120,11 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input id="fechaSal" name='fechaSal' class="form-control" type="text" formControlName="fechaSal" placeholder="Fecha 00/00">
-                        <div id='mensaje'>
+                        <!--<input id="fechaSal" name='fechaSal' class="form-control" type="text" formControlName="fechaSal" placeholder="Fecha 00/00">-->
+                        <input id="fechaSal" name='fechaSal' class="form-control" type="text" placeholder="Fecha 00/00">
+                        <!--<div id='mensaje'>
                             <small id="fechaSalHelp" class="form-text text-muted" *ngIf="(fechaSal.dirty || fechaSal.touched) && fechaSal.invalid && fechaSal.errors.required"> Requerido  </small>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <!--col fecha-->
@@ -133,10 +134,11 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input id="horaSal" name='horaSal' class="form-control" type="text" formControlName="horaSal" placeholder="Hora Salida">
-                        <div id='mensaje'>
+                        <!--<input id="horaSal" name='horaSal' class="form-control" type="text" formControlName="horaSal" placeholder="Hora Salida">-->
+                        <input id="horaSal" name='horaSal' class="form-control" type="text" placeholder="Hora Salida">
+                        <!--<div id='mensaje'>
                             <small id="horaSalHelp" class="form-text text-muted" *ngIf="(horaSal.dirty || horaSal.touched) && horaSal.invalid && horaSal.errors.required"> Requerido  </small>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <!--col Hora Ingreso-->
@@ -149,7 +151,7 @@
                 <!--row-->
                 <div class="col-lg-2 col-12 my-2">
                     <!--col piso-->
-                    <label for="piso">Piso(*)</label>
+                    <label for="piso">Piso<span class="aster">*</span></label>
                     <select id="piso" name='piso' class="form-control" type="text" formControlName="piso" placeholder="Piso">
                         <option></option>
                         <option>Piso 1</option>
@@ -164,7 +166,7 @@
                 <!--col piso-->
                 <div class="col-lg-2 col-12 my-2">
                     <!--col habitacion-->
-                    <label for="habitacion">Habitación(*)</label>
+                    <label for="habitacion">Habitación<span class="aster">*</span></label>
                     <select id="habitacion" name='habitacion' class="form-control" type="text" formControlName="habitacion" placeholder="habitacion">
                         <option></option>
                         <option>Habitación 101</option>
@@ -181,7 +183,7 @@
                 <!--col piso-->
                 <div class="col-lg-7 col-12 my-2">
                     <!--col causa-->
-                    <label for="causa">Causa(*)</label>
+                    <label for="causa">Causa<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
@@ -204,11 +206,11 @@
 
                         </div>
                         <div class="col-lg-2">
-                            <button class="btn btn-warning my-3 mx-3" (click)="navegarAtras()"> Atras</button>
+                            <button class="boton1 btn my-3 mx-3" (click)="navegarAtras()"> Atras</button>
 
                         </div>
                         <div class="col-lg-2">
-                            <button class="btn btn-danger my-3 mx-3" (click)="navegarCancelar()"> Cancelar</button>
+                            <button class="boton2 btn my-3 mx-3" (click)="navegarCancelar()"> Cancelar</button>
 
                         </div>
                     </div>
@@ -220,11 +222,11 @@
 
                         </div>
                         <div class="col-lg-2">
-                            <button class="btn btn-warning my-3 mx-3" (click)="navegarAtrasAdmin()"> Atras</button>
+                            <button class="boton1 btn my-3 mx-3" (click)="navegarAtrasAdmin()"> Atras</button>
 
                         </div>
                         <div class="col-lg-2">
-                            <button class="btn btn-danger my-3 mx-3" (click)="navegarCancelarAdmin()"> Cancelar</button>
+                            <button class="boton2 btn my-3 mx-3" (click)="navegarCancelarAdmin()"> Cancelar</button>
 
                         </div>
                     </div>
@@ -233,7 +235,7 @@
 
             <!--boton agregar-->
         </div>
-        <label for=""> (*) Campo Obligatorio</label>
+        <label for=""> (<span class="aster">*</span>) Campo Obligatorio</label>
 
     </div>
     <!--container-->

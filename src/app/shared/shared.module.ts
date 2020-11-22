@@ -12,12 +12,15 @@ import { FormularioAgregarPacienteComponent } from './components/formularios/for
 import { FormularioAgregarPacientePart2Component } from './components/formularios/formulario-agregar-paciente-part2/formulario-agregar-paciente-part2.component';
 import { FormularioCheckearPacienteComponent } from './components/formularios/formulario-checkear-paciente/formulario-checkear-paciente.component';
 import { RouterLink, RouterModule } from '@angular/router';
+import { NavbarAdmComponent } from './components/navbar-adm/navbar-adm.component';
+import { FormularioAgregarPacientePart1Component } from './components/formularios/formulario-agregar-paciente-part1/formulario-agregar-paciente-part1.component';
 
 const componets = [
   NavbarComponent, NavbarUserComponent, FootersComponent,
   FormularioAgregarPacienteComponent, FormularioAgregarPacientePart2Component,
   PacienteCardComponent, PacienteCardFullComponent, PacienteCardLibreComponent,
-  PacienteCardNombreComponent, FormularioCheckearPacienteComponent
+  PacienteCardNombreComponent, FormularioCheckearPacienteComponent, NavbarAdmComponent,
+  FormularioAgregarPacientePart1Component
 ]
 
 @NgModule({

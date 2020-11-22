@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from '../shared/shared.module';
+
 import { UserComponent } from './user.component';
 import { UserAcercaDeComponent } from './screens/user-acerca-de/user-acerca-de.component';
 import { UserContactosComponent } from './screens/user-contactos/user-contactos.component';
