@@ -9,19 +9,18 @@
             <!--col sidebar-->
             <main class="col-lg-7 col-12 mt-3">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card mb-2">
-                                    <div class="card-body mb-1">
-                                        <div class="row ">
+                    <form [formGroup]="supportFormGroup">
+                        <!--<div class="form-group">
+                            <label for="formGroupExampleInput">Example label</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                        </div>-->
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Another label</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" formControlName="enfermera">
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                    </form>
+                    <button class="btn btn-success" (click)="addEnfermera()"> crear</button>
                 </div>
             </main>
             <div class="col-lg-3 col-12 my-5">

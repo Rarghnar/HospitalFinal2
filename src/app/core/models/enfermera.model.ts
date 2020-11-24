@@ -1,16 +1,16 @@
-export interface Medico{
-
-    _id: number;
+export interface Enfermera{
+    _id: string;
     createdAt?: Date,
     //definition?: string;
+
     nombres: string;
     apellidos: string;
-    sexo:string;
+    sexo: string;
     telefono:number;
-    especialidad:string;
     email: string;
     rut: string;
     contraseña: string;
     contraseñaRepetida: string;
+
     
 }

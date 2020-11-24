@@ -17,12 +17,16 @@ import { SidebarUserComponent } from './components/sidebar-user/sidebar-user.com
 import { UserHomeScreenComponent } from './screens/user-home-screen/user-home-screen.component';
 import { UserCheckearPacienteComponent } from './screens/user-checkear-paciente/user-checkear-paciente.component';
 import { UserPerfileComponent } from './screens/user-perfile/user-perfile.component';
+import { SupportProviderService } from '../core/providers/support-provider.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserListScreenComponent } from './screens/user-list-screen/user-list-screen.component';
+import { SupportListComponent } from './components/support-list/support-list.component';
 
 const component = [
   UserComponent, UserAcercaDeComponent, UserContactosComponent, UserHabitacionesOcupadasComponent,
   UserHabitacionesLibresComponent, UserPacienteComponent, UserListaPacienteComponent,
   UserInfoPacienteComponent, UserPaciente2Component, SidebarUserComponent, UserHomeScreenComponent,
-  UserCheckearPacienteComponent, UserPerfileComponent
+  UserCheckearPacienteComponent, UserPerfileComponent, UserListScreenComponent, SupportListComponent
 ]
 
 
@@ -31,6 +35,9 @@ const component = [
     CommonModule,
     UserRoutingModule,
     SharedModule,
+    ReactiveFormsModule
+  ], providers: [
+    SupportProviderService
   ],
   declarations: [...component]
 })

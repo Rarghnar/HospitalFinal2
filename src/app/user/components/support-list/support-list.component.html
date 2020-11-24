@@ -1,0 +1,24 @@
+<!--<ul class="list-group">
+    <li class="list-group-item active" *ngFor="let enfermeras of enfermera">
+        {{enfermeras.nombres}}  {{enfermeras.apellidos}} {{enfermeras.rut}}
+    </li>
+
+</ul>-->
+
+<div class="card mb-2">
+    <div class="card-body mb-1">
+        <div class="row ">
+            <div class="col-lg-12 col-12 text-left" *ngFor="let enfermeras of enfermera">
+                <p class="text mb-1"> <span class="font-weight-bold">Nombre: </span> {{enfermeras.nombres}}</p>
+                <p class="text mb-1"><span class="font-weight-bold">Apellido:</span> {{enfermeras.apellidos}}</p>
+                <p class="text mb-1"><span class="font-weight-bold">Rut:</span> {{enfermeras.rut}}</p>
+                <i class="fas fa-circle" style="color: red"></i>
+                <p class="text mb-1"> <span class="font-weight-bold">Cama ocupada</span> </p>
+                <div class="col-lg-12 col-12 text-center">
+                    <button type="button" class="btn btn-success m-2">Realizar chequeo</button>
+                    <button type="button" class="btn btn-success m-2">Retirar paciente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -17,7 +17,7 @@ export class MedicoService {
     return this.medicos;
   }
 
-  public getMedicoById(id: number) {
-    return this.medicos.find((medico: Medico) => medico._id == id);
-  }
+  /*public getMedicoById(id: number) {
+    return this.medicos.find((medico: Medico) => medico._id == id)
+  }*/
 }

@@ -13,7 +13,7 @@ export class UserHabitacionesLibresComponent implements OnInit {
   constructor() { 
 
     this.pacientes = [
-      {
+     /* {
         _id: 1,
        // imgURL: 'https://i.blogs.es/68e984/jinx_article_banner/450_1000.jpg',
         nombre: 'Exequiel Rodrigo Andrade Rojas ',
@@ -241,7 +241,7 @@ export class UserHabitacionesLibresComponent implements OnInit {
            ultimoChequeo:'28 de septiembre, 17:15hrs',
            chequeadoPor:'Enferma Catalina Riquelme'
 
-         },
+         },*/
 
       ]
 

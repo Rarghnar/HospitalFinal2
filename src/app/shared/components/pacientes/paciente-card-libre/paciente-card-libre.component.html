@@ -2,8 +2,8 @@
     <div class="card-body mb-1">
         <div class="row ">
             <div class="col-lg-12 col-12 text-center">
-                <div [ngSwitch]="paciente.color">
-                    <div *ngSwitchCase="'green'">
+                <div [ngSwitch]="paciente.camaEstado">
+                    <div *ngSwitchCase="'libre'">
                         <p class="font-weight-bold">Codigo de cama: {{paciente.habitacion}}</p>
                         <i class="fas fa-circle" style="color: green"></i>
                         <p class="text mb-1"> Cama desocupada </p>

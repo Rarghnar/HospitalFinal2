@@ -20,6 +20,7 @@ import { AdmRegistrarMedicComponent } from './screens/adm-registrar-medic/adm-re
 import { RegistrarEnferComponent } from './components/registrar/registrar-enfer/registrar-enfer.component';
 import { RegistrarMedicComponent } from './components/registrar/registrar-medic/registrar-medic.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SupportProviderService } from '../core/providers/support-provider.service';
 
 const compoment = [
   AdmComponent ,AdmAcercaDeComponent, AdmContactosComponent, AdmHabitacionesLibresComponent,
@@ -35,6 +36,8 @@ const compoment = [
     AdmRoutingModule,
     SharedModule,
     ReactiveFormsModule
+  ], providers: [
+    SupportProviderService
   ],
   declarations: [...compoment]
 
