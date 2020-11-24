@@ -60,38 +60,8 @@
                     <!--col dia-->
                     <label for="dia">Dia<span class="aster">*</span></label>
                     <select id="dia" name='dia' class="form-control" type="text" formControlName="dia" placeholder="Dia">
-                        <option></option>
-                        <option>1</option>                        
-                        <option>2</option>                        
-                        <option>3</option>                        
-                        <option>4</option>                        
-                        <option>5</option>                        
-                        <option>6</option>                        
-                        <option>7</option>                        
-                        <option>8</option>                        
-                        <option>9</option>                        
-                        <option>10</option>                        
-                        <option>11</option>                        
-                        <option>12</option>                        
-                        <option>13</option>                        
-                        <option>14</option>                        
-                        <option>15</option>                        
-                        <option>16</option>                        
-                        <option>17</option>                        
-                        <option>18</option>                        
-                        <option>19</option>                        
-                        <option>20</option>                        
-                        <option>21</option>                        
-                        <option>22</option>                        
-                        <option>23</option>                        
-                        <option>24</option>                        
-                        <option>25</option>                        
-                        <option>26</option>                        
-                        <option>27</option>                        
-                        <option>28</option>                        
-                        <option>29</option>                        
-                        <option>30</option>                        
-                        <option>31</option>                         
+                        <option *ngFor="let comune of comunes">{{comune}}</option>
+                                           
                     </select>
                     <div id='mensaje'>
                         <small id="diaHelp" class="form-text text-muted" *ngIf="(dia.dirty || dia.touched) && dia.invalid && dia.errors.required"> Requerido  </small>
@@ -103,18 +73,7 @@
                     <!--col mes-->
                     <label for="mes">Mes<span class="aster">*</span></label>
                     <select id="mes" name='mes' class="form-control" type="text" formControlName="mes" placeholder="Mes">
-                        <option>Enero</option>                        
-                        <option>Febrero</option>                        
-                        <option>Marzo</option>                        
-                        <option>Abril</option>                        
-                        <option>Mayo</option>                        
-                        <option>Junio</option>                        
-                        <option>Julio</option>                        
-                        <option>Agosto</option>                        
-                        <option>Septiembre</option>                        
-                        <option>Octubre</option>                        
-                        <option>Noviembre</option>                        
-                        <option>Diciembre</option>                       
+                        <option *ngFor="let mes of meses">{{mes}}</option>                                              
                     </select>
                     <div id='mensaje'>
                         <small id="mesHelp" class="form-text text-muted" *ngIf="(mes.dirty || mes.touched) && mes.invalid && mes.errors.required"> Requerido  </small>
@@ -126,18 +85,7 @@
                     <!--col anio-->
                     <label for="anio">Año<span class="aster">*</span></label>
                     <select id="anio" name='anio' class="form-control" type="text" formControlName="anio" placeholder="Año">
-                        <option>2020</option>                        
-                            <option>2019</option>                        
-                            <option>2018</option>                        
-                            <option>2017</option>                        
-                            <option>2016</option>                        
-                            <option>2015</option>                        
-                            <option>2014</option>                        
-                            <option>2013</option>                        
-                            <option>2012</option>                        
-                            <option>2011</option>                        
-                            <option>2010</option>                        
-                            <option>2009</option>                      
+                        <option *ngFor="let anio of anios">{{anio}}</option>                                            
                     </select>
                     <div id='mensaje'>
                         <small id="anioHelp" class="form-text text-muted" *ngIf="(anio.dirty || anio.touched) && anio.invalid && anio.errors.required"> Requerido  </small>
@@ -194,62 +142,7 @@
                     <!--col ciudad-->
                     <label for="ciudad">Provincia<span class="aster">*</span></label>
                     <select id="ciudad" name='ciudad' class="form-control" type="text" formControlName="ciudad" placeholder="ciudad">
-                        <option></option>
-                        <option>Valparaiso</option> 
-                        <option>Santiago</option>  
-                        <option>Angol</option>
-                        <option>Antofagasta</option>
-                        <option>Arica</option>
-                        <option>Bulnes</option>
-                        <option>Calama</option>
-                        <option>Castro</option>  
-                        <option>Cauquenes</option>  
-                        <option>Chaitén</option>  
-                        <option>Chañaral</option>  
-                        <option>Chile Chico</option>  
-                        <option>Cochrane</option>  
-                        <option>Colina</option>  
-                        <option>Concepción</option>  
-                        <option>Copiapó</option>  
-                        <option>Coquimbo</option>  
-                        <option>La serena</option>  
-                        <option>Coyhaique</option>  
-                        <option>Curicó</option>  
-                        <option>Hangan Roa</option>  
-                        <option>Illapel</option>  
-                        <option>Iquique</option>  
-                        <option>La Ligua</option>  
-                        <option>La Unión</option>
-                        <option>Lebu</option>  
-                        <option>Linares</option>  
-                        <option>Los Andes</option>  
-                        <option>Los Ángeles</option>  
-                        <option>Melipilla</option>  
-                        <option>Osorno</option>  
-                        <option>Ovalle</option>  
-                        <option>Pichilemu</option>  
-                        <option>Porvenir</option>  
-                        <option>Pozo Almonte</option>  
-                        <option>Puente alto</option>  
-                        <option>Puerto Aysen</option>  
-                        <option>Puerto Montt</option>  
-                        <option>Puerto Natales</option>
-                        <option>Puerto Williams</option>  
-                        <option>Punta Arenas</option>  
-                        <option>Putre</option>  
-                        <option>Quillota</option>  
-                        <option>Quilpue</option>  
-                        <option>Quirihue</option>  
-                        <option>Rancagua</option>  
-                        <option>San Antonio</option>  
-                        <option>San Bernardo</option>  
-                        <option>San Carlos</option>  
-                        <option>San Felipe</option>  
-                        <option>San Fernando</option>  
-                        <option>Talagante</option>
-                        <option>Talca</option>  
-                        <option>Tocopilla</option>  
-                        <option>Vallenar</option>                       
+                        <option *ngFor="let ciudad of ciudades">{{ciudad}}</option>                                         
                     </select>
                     <div id='mensaje'>
                         <small id="ciudadHelp" class="form-text text-muted" *ngIf="(ciudad.dirty || ciudad.touched) && ciudad.invalid && ciudad.errors.required"> Requerido  </small>

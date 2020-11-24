@@ -33,7 +33,9 @@ export class RegistrarEnferComponent implements OnInit {
       nombre: new FormControl('',[Validators.required]),
       apellido: new FormControl('',[Validators.required]),
       rut: new FormControl('',[Validators.required]),
-      password2: new FormControl('',[Validators.required]),
+      password2: new FormControl('', [Validators.required]),
+      telefono: new FormControl('', [Validators.required]),
+      sexo: new FormControl('', [Validators.required]),
     });
   }
 
@@ -48,4 +50,6 @@ export class RegistrarEnferComponent implements OnInit {
   get apellido() { return this.checkoutForm.get('apellido'); }
   get rut() { return this.checkoutForm.get('rut'); }
   get password2() { return this.checkoutForm.get('password2'); }
+  get telefono() { return this.checkoutForm.get('telefono');}
+  get sexo() { return this.checkoutForm.get('sexo'); }
 }

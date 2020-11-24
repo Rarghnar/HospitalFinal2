@@ -50,7 +50,7 @@ export class FormularioAgregarPacientePart2Component implements OnInit {
       horaIng: new FormControl('', [Validators.required]),
       //fechaSal: new FormControl('', [Validators.required]),
       //horaSal: new FormControl('', [Validators.required]),
-      piso: new FormControl('', [Validators.required]),
+      cama: new FormControl('', [Validators.required]),
       habitacion: new FormControl('', [Validators.required]),
       causa: new FormControl('', [Validators.required]),
       //password: new FormControl('',[Validators.required])
@@ -71,7 +71,7 @@ export class FormularioAgregarPacientePart2Component implements OnInit {
   get horaIng() { return this.checkoutForm.get('horaIng');}
   //get fechaSal() { return this.checkoutForm.get('fechaSal');}
   //get horaSal() { return this.checkoutForm.get('horaSal');}
-  get piso() { return this.checkoutForm.get('piso');}
+  get cama() { return this.checkoutForm.get('cama');}
   get habitacion() { return this.checkoutForm.get('habitacion');}
   get causa() { return this.checkoutForm.get('causa');}
   //get password() { return this.checkoutForm.get('password'); }

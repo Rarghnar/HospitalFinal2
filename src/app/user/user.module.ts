@@ -16,11 +16,13 @@ import { UserPaciente2Component } from './screens/user-paciente2/user-paciente2.
 import { SidebarUserComponent } from './components/sidebar-user/sidebar-user.component';
 import { UserHomeScreenComponent } from './screens/user-home-screen/user-home-screen.component';
 import { UserCheckearPacienteComponent } from './screens/user-checkear-paciente/user-checkear-paciente.component';
+import { UserPerfileComponent } from './screens/user-perfile/user-perfile.component';
 
 const component = [
   UserComponent, UserAcercaDeComponent, UserContactosComponent, UserHabitacionesOcupadasComponent,
   UserHabitacionesLibresComponent, UserPacienteComponent, UserListaPacienteComponent,
-  UserInfoPacienteComponent, UserPaciente2Component, SidebarUserComponent, UserHomeScreenComponent
+  UserInfoPacienteComponent, UserPaciente2Component, SidebarUserComponent, UserHomeScreenComponent,
+  UserCheckearPacienteComponent, UserPerfileComponent
 ]
 
 
@@ -30,6 +32,6 @@ const component = [
     UserRoutingModule,
     SharedModule,
   ],
-  declarations: [...component, UserCheckearPacienteComponent]
+  declarations: [...component]
 })
 export class UserModule { }

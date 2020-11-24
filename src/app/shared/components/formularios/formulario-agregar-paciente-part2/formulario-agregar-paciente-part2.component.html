@@ -151,16 +151,16 @@
                 <!--row-->
                 <div class="col-lg-2 col-12 my-2">
                     <!--col piso-->
-                    <label for="piso">Piso<span class="aster">*</span></label>
-                    <select id="piso" name='piso' class="form-control" type="text" formControlName="piso" placeholder="Piso">
-                        <option></option>
+                    <label for="cama">Cama<span class="aster">*</span></label>
+                    <select id="cama" name='cama' class="form-control" type="text" formControlName="cama" placeholder="Cama">
+                        <option></option>cama
                         <option>Piso 1</option>
                         <option>Piso 2</option>
                         <option>Piso 3</option>
                         <option>Piso 4</option>                        
                     </select>
                     <div id='mensaje'>
-                        <small id="pisoHelp" class="form-text text-muted" *ngIf="(piso.dirty || piso.touched) && piso.invalid && piso.errors.required"> Requerido  </small>
+                        <small id="camaHelp" class="form-text text-muted" *ngIf="(cama.dirty || cama.touched) && cama.invalid && cama.errors.required"> Requerido  </small>
                     </div>
                 </div>
                 <!--col piso-->

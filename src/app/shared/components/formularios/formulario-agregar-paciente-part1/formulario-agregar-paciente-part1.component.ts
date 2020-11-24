@@ -78,4 +78,27 @@ export class FormularioAgregarPacientePart1Component implements OnInit {
   
 
 
+
+
+
+
+  //Declaraciones
+  /////////////////////////////////////////
+
+  comunes: string[] = ["","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",
+    "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+  
+  meses: string[] = ["", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
+    "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+  
+  anios: string[] = ["", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010"];
+
+  ciudades: string[] = ["", "Valparaiso", "Santiago", "Angol", "Antofagasta", "Arica", "Bulnes", "Calama",
+    "Castro", "Cauquenes", "Chaitén", "Chañaral", "Chile Chico", "Cochrane", "Colina", "Concepción",
+    "Copiapó", "Coquimbo", "La serena", "Coyhaique", "Curicó", "Hangan Roa", "Illapel", "Iquique",
+    "La Ligua", "La Unión", "Lebu", "Linares", "Los Andes", "Los Ángeles", "Melipilla", "Osorno",
+    "Ovalle", "Pichilemu", "Porvenir", "Pozo Almonte", "Puente alto", "Puerto Aysen", "Puerto Montt",
+    "Puerto Natales", "Puerto Williams", "Punta Arenas", "Putre", "Quillota", "Quilpue", "Quirihue",
+    "Rancagua", "San Antonio", "San Bernardo", "San Carlos", "San Felipe", "San Fernando", "Talagante",
+    "Talca","Tocopilla","Vallenar"];
 }

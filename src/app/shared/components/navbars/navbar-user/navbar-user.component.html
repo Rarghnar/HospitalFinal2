@@ -33,7 +33,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -79,7 +79,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -124,7 +124,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -169,7 +169,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -214,7 +214,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -259,7 +259,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -304,7 +304,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -349,7 +349,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -394,7 +394,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
@@ -405,7 +405,6 @@
             </div>
         </header>
     </div>
-
     <!--Default-->
     <div *ngSwitchDefault>
         <header class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -440,7 +439,8 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/home">Perfil</a>
+                            <!--<button class="dropdown-item" [routerLink]="['/user/perfil', medicos._id]">Perfil</button>-->
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <form action="/logout" class="logout-form">
                                 <a class="dropdown-item" href="#">Cerrar Sesión</a>
