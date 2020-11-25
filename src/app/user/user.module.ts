@@ -21,6 +21,7 @@ import { SupportProviderService } from '../core/providers/support-provider.servi
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserListScreenComponent } from './screens/user-list-screen/user-list-screen.component';
 import { SupportListComponent } from './components/support-list/support-list.component';
+import { HabitacionService } from '../core/providers/habitacion/habitacion.service';
 
 const component = [
   UserComponent, UserAcercaDeComponent, UserContactosComponent, UserHabitacionesOcupadasComponent,
@@ -37,7 +38,7 @@ const component = [
     SharedModule,
     ReactiveFormsModule
   ], providers: [
-    SupportProviderService
+    HabitacionService
   ],
   declarations: [...component]
 })

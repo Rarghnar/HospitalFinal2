@@ -14,7 +14,14 @@ export class HabitacionService {
     return this.httpService.get<Habitacion[]>('/habitacion/all');
   }
   
-  public addHabitacion(habitacion: any): Observable<Habitacion> {
-    return this.httpService.post<Habitacion>('/habitacion/add', habitacion);
+  /*public async addHabitacion(habitacion: Partial<Habitacion>){
+    const habitacion$ = await this.httpService.post<Habitacion>('/habitacion/add', habitacion)
+      await habitacion$.toPromise();
+      return habitacion$
+    console.log(habitacion$);
+  }*/
+
+  public addHabitacion(habitacion: Partial<Habitacion>) {
+    return this.httpService.post<Habitacion>('/habitacion/add', habitacion)
   }
 }

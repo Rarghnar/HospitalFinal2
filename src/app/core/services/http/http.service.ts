@@ -35,4 +35,11 @@ export class HttpService {
         return data.message as type;
       }));
   }
+
+  public patch<type>(path: string, body: any) {
+    return this.httpClient.patch<type>(this.baseUrl + path, body, this.httpOptions)
+      .pipe(map((data: any) => {
+        return data.message as type;
+    }))
+  }
 }

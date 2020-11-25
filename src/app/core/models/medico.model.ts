@@ -7,7 +7,8 @@ export interface Medico{
     apellidos: string;
     sexo:string;
     telefono:number;
-    especialidad:string;
+    especialidad: string;
+    direccion: string;
     email: string;
     rut: string;
     contraseña: string;

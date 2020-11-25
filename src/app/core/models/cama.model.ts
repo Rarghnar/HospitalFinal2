@@ -10,7 +10,8 @@ export interface Cama{
     nombreMedicoEncargado?:string;
     rutMedicoEncargado?:string;
     nombreEnfermeraEncargada?:string;
-    rutEnfermeraEncargada?:string;
+    rutEnfermeraEncargada?: string;
+    camaLibre: string;
 
 
 }
