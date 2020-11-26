@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Paciente } from '@core/models/paciente.model';
-import { PacienteService } from '../../../core/services/paciente/paciente.service';
+import { PacienteService } from '../../../core/providers/paciente/paciente.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user-lista-paciente',
@@ -9,12 +10,17 @@ import { PacienteService } from '../../../core/services/paciente/paciente.servic
 })
 export class UserListaPacienteComponent implements OnInit {
 
-  public pacientes: Paciente[];
+  public pacientes$: Observable<Paciente[]>;
 
-  constructor(private pacienteService: PacienteService) { }
+  constructor(private pacienteProvider: PacienteService) { 
+    this.pacientes$ = this.getPaciente();
+  }
 
   ngOnInit(): void {
-    this.pacientes = this.pacienteService.getALLPacientes();
+  }
+
+  getPaciente(): Observable<Paciente[]> {
+    return this.pacienteProvider.getPaciente();
   }
 
 }

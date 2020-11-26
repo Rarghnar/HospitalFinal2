@@ -14,6 +14,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { NavbarAdmComponent } from './components/navbars/navbar-adm/navbar-adm.component';
 import { FormularioAgregarPacientePart1Component } from './components/formularios/formulario-agregar-paciente-part1/formulario-agregar-paciente-part1.component';
 import { NavbarComponent } from './components/navbars/navbar/navbar.component';
+import { PacienteService } from '../core/providers/paciente/paciente.service';
 
 const componets = [
   NavbarComponent, NavbarUserComponent, FootersComponent,
@@ -30,6 +31,8 @@ const componets = [
     ReactiveFormsModule,
     FormsModule,
     RouterModule
+  ], providers: [
+    PacienteService
   ],
   exports: [...componets]
 })

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cama } from '../../../core/models/cama.model';
 import { Enfermera } from '../../../core/models/enfermera.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-support-list',
@@ -12,9 +12,12 @@ export class SupportListComponent implements OnInit {
   @Input()
   enfermera: Enfermera[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  public getUrl(): string {
+    return this.router.url;
+  }
 }

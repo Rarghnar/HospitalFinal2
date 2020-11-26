@@ -19,15 +19,13 @@ export class UserPerfileComponent implements OnInit {
     this.checkoutForm = this.createFormGroup();
    }
 
-  
-   createFormGroup() {
+  createFormGroup() {
     return new FormGroup({
       numeroPiso: new FormControl('', [Validators.required]),
       cantidadCamas: new FormControl('', [Validators.required]),
       codigoHabitacion: new FormControl('',[Validators.required])
     });
   }
-
 
   ngOnInit(): void {
   }
@@ -37,9 +35,7 @@ export class UserPerfileComponent implements OnInit {
       numeroPiso: this.checkoutForm.get('numeroPiso').value,
       cantidadCamas: this.checkoutForm.get('cantidadCamas').value,
       codigoHabitacion: this.checkoutForm.get('codigoHabitacion').value
-
     }
-    //return this.habitacionProviderService.addHabitacion(habitacion)
     try {
       await this.habitacionProviderService.addHabitacion(habitacion).toPromise();
       alert("Habitacion Agregada");
@@ -47,7 +43,6 @@ export class UserPerfileComponent implements OnInit {
       alert("Error al agregar la habitacion");
     }
   }
-
 
   onSubmit(){
     this.mensaje="datos completados";

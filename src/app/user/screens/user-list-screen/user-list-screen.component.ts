@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SupportProviderService } from '../../../core/providers/support-provider.service';
 import { Observable } from 'rxjs';
 import { Enfermera } from '../../../core/models/enfermera.model';
+import { EnfermeraService } from '../../../core/providers/enfermera/enfermera.service';
 
 @Component({
   selector: 'app-user-list-screen',
@@ -12,9 +12,7 @@ export class UserListScreenComponent implements OnInit {
 
   public enfermera$: Observable<Enfermera[]>;
 
-  constructor(
-    private supportProvider: SupportProviderService
-  ) {
+  constructor(private enfermeraProvider: EnfermeraService) {
     this.enfermera$ = this.getEnfermera();
    }
 
@@ -22,6 +20,6 @@ export class UserListScreenComponent implements OnInit {
   }
 
   getEnfermera(): Observable<Enfermera[]> {
-    return this.supportProvider.getEnfermera();
+    return this.enfermeraProvider.getEnfermera();
   }
 }

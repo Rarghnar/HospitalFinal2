@@ -2,10 +2,12 @@
 
     <h1>Agregar Nuevo Paciente</h1>
     <div class="dropdown-divider  border-secundary"></div>
+    <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+
     <div class="container-fluid">
         <!--container-->
         <div id='formulario' [ngClass]="{lleno: mensaje}">
-            <h2 class=" my-2" for="pacient">Paciente</h2>
+            <h2 class=" my-2" for="paciente">Paciente</h2>
 
             <div class="row my-4">
                 <!--row-->
@@ -37,13 +39,14 @@
                 <!--col apellido-->
                 <div class="col-lg-3 col-12">
                     <!--col rut-->
-                    <label for="rut">Rut<span class="aster">*</span></label>
+                    <label for="rut">Rut<span class="aster">*</span> (12345678-9)</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
                         <input id="rut" name='rut' class="form-control" type="text" formControlName="rut" placeholder="Rut">
                         <div id='mensaje'>
                             <small id="rutHelp" class="form-text text-muted" *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.required"> Requerido  </small>
+                            <small id="rutHelp" class="form-text text-muted" *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.pattern"> Formato Incorrecto  </small>
                         </div>
                     </div>
                 </div>
@@ -114,13 +117,14 @@
                 <!--row-->
                 <div class="col-lg-2 col-12 my-2">
                     <!--col edad-->
-                    <label for="edad">Edad<span class="aster">*</span></label>
+                    <label for="edad">Edad<span class="aster">*</span> (Solo Números)</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
                         <input id="edad" name='edad' class="form-control" type="text" formControlName="edad" placeholder="Edad">
                         <div id='mensaje'>
                             <small id="edadHelp" class="form-text text-muted" *ngIf="(edad.dirty || edad.touched) && edad.invalid && edad.errors.required"> Requerido  </small>
+                            <small id="edadHelp" class="form-text text-muted" *ngIf="(edad.dirty || edad.touched) && edad.invalid && edad.errors.pattern"> Formato Incorrecto  </small>
                         </div>
                     </div>
                 </div>
@@ -128,14 +132,22 @@
                 <div class="col-lg-2 col-12 my-2">
                     <!--col nacionalidad-->
                     <label for="nacionalidad">Nacionalidad<span class="aster">*</span></label>
-                    <div class="input-group">
+                    <select id="nacionalidad" name='nacionalidad' class="form-control" type="text" formControlName="nacionalidad" placeholder="Nacionalidad">
+                        <option ></option>                                         
+                        <option >Chilena</option>                                         
+                        <option >Extranjera</option>                                         
+                    </select>
+                    <div id='mensaje'>
+                        <small id="nacionalidadHelp" class="form-text text-muted" *ngIf="(nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.required"> Requerido  </small>
+                    </div>
+                    <!--<div class="input-group">
                         <div class="input-group-prepend">
                         </div>
                         <input id="nacionalidad" name='nacionalidad' class="form-control" type="text" formControlName="nacionalidad" placeholder="Nacionalidad">
                         <div id='mensaje'>
                             <small id="nacionalidadHelp" class="form-text text-muted" *ngIf="(nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.required"> Requerido  </small>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <!--col nacionalidad-->
                 <div class="col-lg-2 col-12 my-2">
@@ -219,6 +231,7 @@
                         <input id="rutRep" name='rutRep' class="form-control" type="text" formControlName="rutRep" placeholder="Rut">
                         <div id='mensaje'>
                             <small id="rutRepHelp" class="form-text text-muted" *ngIf="(rutRep.dirty || rutRep.touched) && rutRep.invalid && rutRep.errors.required"> Requerido  </small>
+                            <small id="rutRepHelp" class="form-text text-muted" *ngIf="(rutRep.dirty || rutRep.touched) && rutRep.invalid && rutRep.errors.pattern"> Formato Incorrecto  </small>
                         </div>
                     </div>
                 </div>
@@ -240,7 +253,7 @@
             </div>
             <!--row-->
             <!--boton agregar-->
-            <div [ngSwitch]="getUrl()">
+            <!--<div [ngSwitch]="getUrl()">
                 <div *ngSwitchCase="'/user/paciente'">
                     <button class="btn btn-primary my-3" (click)="navegarPaciente2()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>
                 </div>
@@ -248,10 +261,228 @@
                     <button class="btn btn-primary my-3" (click)="navegarPaciente2Admin()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>
                 </div>
                 <label for=""> (<span class="aster">*</span>) Campo Obligatorio</label>
-            </div>
+            </div>-->
             <!--boton agregar-->
-            <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+            <!-- 
+---------------------------------------------------------------
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+    Segunda Parte
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+-------------------------------------------------------------
+-->
+
+
+            <h2>Información del Doctor</h2>
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col nombre-->
+                    <label for="nombresDoc">Nombres<span class="aster">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="nombresDoc" name='nombresDoc' class="form-control" type="text" formControlName="nombresDoc" placeholder="Nombres">
+                        <div id='mensaje'>
+                            <small id="nombresDocoHelp" class="form-text text-muted" *ngIf="(nombresDoc.dirty || nombresDoc.touched) && nombresDoc.invalid && nombresDoc.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col nombre-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col apellidosDoc-->
+                    <label for="apellidosDoc">Apellidos<span class="aster">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="apellidosDoc" name='apellidosDoc' class="form-control" type="text" formControlName="apellidosDoc" placeholder="Apellidos">
+                        <div id='mensaje'>
+                            <small id="apellidosDocHelp" class="form-text text-muted" *ngIf="(apellidosDoc.dirty || apellidosDoc.touched) && apellidosDoc.invalid && apellidosDoc.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col apellido-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col rutDoc-->
+                    <label for="rutDoc">Rut<span class="aster">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="rutDoc" name='rutDoc' class="form-control" type="text" formControlName="rutDoc" placeholder="rutDoc">
+                        <div id='mensaje'>
+                            <small id="rutDocHelp" class="form-text text-muted" *ngIf="(rutDoc.dirty || rutDoc.touched) && rutDoc.invalid && rutDoc.errors.required"> Requerido  </small>
+                            <small id="rutDocHelp" class="form-text text-muted" *ngIf="(rutDoc.dirty || rutDoc.touched) && rutDoc.invalid && rutDoc.errors.pattern"> Formato Incorrecto  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col rut-->
+            </div>
+            <!--row-->
+            <div class="dropdown-divider  border-secundary"></div>
+            <h2>Tipo de Atención</h2>
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-3 col-12 my-2">
+                    <!--col atencion-->
+                    <label for="atencion">Atención Medica<span class="aster">*</span></label>
+                    <select id="atencion" name='atencion' class="form-control" type="text" formControlName="atencion" placeholder="Atencion">
+                        <option></option>
+                        <option>Hospitalizar</option>
+                        <option>Urgencia</option>
+                        <option>Revisión</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="atencionHelp" class="form-text text-muted" *ngIf="(atencion.dirty || atencion.touched) && atencion.invalid && atencion.errors.required"> Requerido  </small>
+                    </div>
+                </div>
+                <!--col atencion-->
+                <div class="col-lg-7 col-12 my-2">
+                    <!--col motivo-->
+                    <label for="motivo">Motivo<span class="aster">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="motivo" name='motivo' class="form-control" type="text" formControlName="motivo" placeholder="Motivo">
+                        <div id='mensaje'>
+                            <small id="motivoHelp" class="form-text text-muted" *ngIf="(motivo.dirty || motivo.touched) && motivo.invalid && motivo.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col motivo-->
+            </div>
+            <!--row-->
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col fecha-->
+                    <label for="fechaIng">Fecha Ingreso<span class="aster">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="fechaIng" name='fechaIng' class="form-control" type="text" formControlName="fechaIng" placeholder="Fecha 00/00">
+                        <div id='mensaje'>
+                            <small id="fechaIngHelp" class="form-text text-muted" *ngIf="(fechaIng.dirty || fechaIng.touched) && fechaIng.invalid && fechaIng.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col fecha-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col Hora Ingreso-->
+                    <label for="horaIng">Hora Ingreso<span class="aster">*</span></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="horaIng" name='horaIng' class="form-control" type="text" formControlName="horaIng" placeholder="Hora Ingreso">
+                        <div id='mensaje'>
+                            <small id="horaIngHelp" class="form-text text-muted" *ngIf="(horaIng.dirty || horaIng.touched) && horaIng.invalid && horaIng.errors.required"> Requerido  </small>
+                        </div>
+                    </div>
+                </div>
+                <!--col Hora Ingreso-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col fecha-->
+                    <label for="fechaSal">Fecha Salida</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <!--<input id="fechaSal" name='fechaSal' class="form-control" type="text" formControlName="fechaSal" placeholder="Fecha 00/00">-->
+                        <input id="fechaSal" name='fechaSal' class="form-control" type="text" placeholder="Fecha 00/00">
+                        <!--<div id='mensaje'>
+                            <small id="fechaSalHelp" class="form-text text-muted" *ngIf="(fechaSal.dirty || fechaSal.touched) && fechaSal.invalid && fechaSal.errors.required"> Requerido  </small>
+                        </div>-->
+                    </div>
+                </div>
+                <!--col fecha-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col Hora Ingreso-->
+                    <label for="horaSal">Hora Salida</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <!--<input id="horaSal" name='horaSal' class="form-control" type="text" formControlName="horaSal" placeholder="Hora Salida">-->
+                        <input id="horaSal" name='horaSal' class="form-control" type="text" placeholder="Hora Salida">
+                        <!--<div id='mensaje'>
+                            <small id="horaSalHelp" class="form-text text-muted" *ngIf="(horaSal.dirty || horaSal.touched) && horaSal.invalid && horaSal.errors.required"> Requerido  </small>
+                        </div>-->
+                    </div>
+                </div>
+                <!--col Hora Ingreso-->
+            </div>
+            <!--row-->
+            <div class="dropdown-divider  border-secundary"></div>
+            <h2>Habitaciones</h2>
+            <!--Habitaciones-->
+            <div class="row my-4">
+                <!--row-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col piso-->
+                    <label for="cama">Cama<span class="aster">*</span></label>
+                    <select id="cama" name='cama' class="form-control" type="text" formControlName="cama" placeholder="Cama">
+                        <option></option>cama
+                        <option>Cama 1</option>
+                        <option>Cama 2</option>
+                        <option>Cama 3</option>
+                        <option>Cama 4</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="camaHelp" class="form-text text-muted" *ngIf="(cama.dirty || cama.touched) && cama.invalid && cama.errors.required"> Requerido  </small>
+                    </div>
+                </div>
+                <!--col piso-->
+                <div class="col-lg-2 col-12 my-2">
+                    <!--col habitacion-->
+                    <label for="habitacion">Habitación<span class="aster">*</span></label>
+                    <select id="habitacion" name='habitacion' class="form-control" type="text" formControlName="habitacion" placeholder="habitacion">
+                        <option></option>
+                        <option>Habitación 101</option>
+                        <option>Habitación 203</option>
+                        <option>Habitación 204</option>
+                        <option>Habitación 302</option>
+                        <option>Habitación 303</option>
+                        <option>Habitación 306</option>                        
+                    </select>
+                    <div id='mensaje'>
+                        <small id="habitacionHelp" class="form-text text-muted" *ngIf="(habitacion.dirty || habitacion.touched) && habitacion.invalid && habitacion.errors.required"> Requerido  </small>
+                    </div>
+                </div>
+                <!--col piso-->
+                <!--col causa-->
+            </div>
+            <!--row-->
+            <!--habitaciones-->
+            <!--boton agregar-->
+            <div [ngSwitch]="getUrl()">
+                <div *ngSwitchCase="'/user/paciente'">
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <button class="btn btn-primary my-3 mx-3" (click)="addPaciente()" type="submit" [disabled]="!checkoutForm.valid">Agregar</button>
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="boton2 btn my-3 mx-3" (click)="navegarCancelar()"> Cancelar</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'/adm/paciente'">
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <button class="btn btn-primary my-3 mx-3" (click)="addPaciente()" type="submit" [disabled]="!checkoutForm.valid">Agregar</button>
+
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="boton2 btn my-3 mx-3" (click)="navegarCancelarAdmin()"> Cancelar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+
     </div>
     <!--container-->
 </form>

@@ -14,7 +14,15 @@ export class PacienteService {
     return this.httpService.get<Paciente[]>('/paciente/all');
   }
   
-  public addPaciente(paciente: any): Observable<Paciente> {
+  public getPacienteById(id: string): Observable<Paciente | null> {
+    return this.httpService.get<Paciente>('/paciente/:id')
+  }
+
+
+  public addPaciente(paciente: Partial<Paciente>) {
     return this.httpService.post<Paciente>('/paciente/add', paciente);
   }
+
+
+
 }

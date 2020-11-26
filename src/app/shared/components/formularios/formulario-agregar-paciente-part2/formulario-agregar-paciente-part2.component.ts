@@ -41,9 +41,9 @@ export class FormularioAgregarPacientePart2Component implements OnInit {
 
   createFormGroup() {
     return new FormGroup({
-      nombres: new FormControl('', [Validators.required]),
-      rut: new FormControl('', [Validators.required]),
-      apellidos: new FormControl('', [Validators.required]),
+      nombresDoc: new FormControl('', [Validators.required]),
+      rutDoc: new FormControl('', [Validators.required]),
+      apellidosDoc: new FormControl('', [Validators.required]),
       atencion: new FormControl('', [Validators.required]),
       motivo: new FormControl('', [Validators.required]),
       fechaIng: new FormControl('', [Validators.required]),
@@ -62,9 +62,9 @@ export class FormularioAgregarPacientePart2Component implements OnInit {
     this.isDivVisible=true;
   }
 
-  get nombres() { return this.checkoutForm.get('nombres'); }
-  get rut() { return this.checkoutForm.get('rut'); }
-  get apellidos() { return this.checkoutForm.get('apellidos'); }
+  get nombresDoc() { return this.checkoutForm.get('nombresDoc'); }
+  get rutDoc() { return this.checkoutForm.get('rutDoc'); }
+  get apellidosDoc() { return this.checkoutForm.get('apellidosDoc'); }
   get atencion() { return this.checkoutForm.get('atencion');}
   get motivo() { return this.checkoutForm.get('motivo');}
   get fechaIng() { return this.checkoutForm.get('fechaIng');}

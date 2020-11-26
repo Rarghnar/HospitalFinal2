@@ -40,6 +40,6 @@ export class HttpService {
     return this.httpClient.patch<type>(this.baseUrl + path, body, this.httpOptions)
       .pipe(map((data: any) => {
         return data.message as type;
-    }))
+      }));
   }
 }

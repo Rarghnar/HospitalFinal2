@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class PacienteCardNombreComponent implements OnInit {
 
   @Input()
-  public paciente: Paciente
+  paciente: Paciente[];
 
   constructor(private router: Router) { }
 

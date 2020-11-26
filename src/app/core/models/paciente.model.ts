@@ -1,14 +1,13 @@
 
 
-export interface Paciente{
-    
+export interface Paciente{    
   _id: number; 
   createdAt: Date;
   nombres: string;
   apellidos: string;
   rut: string;
   diaNacimiento: number;
-  mesNacimiento: number;
+  mesNacimiento: string;
   anioNacimiento: number;
   sexo: string;
   edad: number;

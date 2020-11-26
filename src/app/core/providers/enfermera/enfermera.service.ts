@@ -14,7 +14,7 @@ export class EnfermeraService {
     return this.httpService.get<Enfermera[]>('/enfermera/all');
   }
   
-  public addMedico(enfermera: any): Observable<Enfermera> {
+  public addMedico(enfermera: Partial<Enfermera>) {
     return this.httpService.post<Enfermera>('/enfermera/add', enfermera);
   }
 }

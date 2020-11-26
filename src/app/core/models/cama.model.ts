@@ -1,13 +1,14 @@
 export interface Cama{
 
 
-
     _id:string;
     createdAt:Date,
     numeroDeCama?: Number,
-    nombrePaciente?:string;
+    nombrePaciente?: string;
+    apellidosPaciente?: string;
     rutPaciente?:string;
-    nombreMedicoEncargado?:string;
+    nombreMedicoEncargado?: string;
+    apellidosMedicoEncargado?: string;
     rutMedicoEncargado?:string;
     nombreEnfermeraEncargada?:string;
     rutEnfermeraEncargada?: string;

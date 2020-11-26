@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Paciente } from '../../../core/models/paciente.model';
-import { PacienteService } from '../../../core/services/paciente/paciente.service';
+import { PacienteService } from '../../../core/providers/paciente/paciente.service';
 
 @Component({
   selector: 'app-adm-info-paciente',
@@ -17,7 +17,7 @@ export class AdmInfoPacienteComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.paciente = this.pacienteService.getPacienteById(this.id);
+    //this.paciente = this.pacienteService.getPacienteById(this.id);
   }
 
 }

@@ -14,39 +14,39 @@
                 <!--row-->
                 <div class="col-lg-3 col-12 my-2">
                     <!--col nombre-->
-                    <label for="nombres">Nombres<span class="aster">*</span></label>
+                    <label for="nombresDoc">Nombres<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input id="nombres" name='nombres' class="form-control" type="text" formControlName="nombres" placeholder="Nombres">
+                        <input id="nombresDoc" name='nombresDoc' class="form-control" type="text" formControlName="nombresDoc" placeholder="Nombres">
                         <div id='mensaje'>
-                            <small id="nombreoHelp" class="form-text text-muted" *ngIf="(nombres.dirty || nombres.touched) && nombres.invalid && nombres.errors.required"> Requerido  </small>
+                            <small id="nombresDocoHelp" class="form-text text-muted" *ngIf="(nombresDoc.dirty || nombresDoc.touched) && nombresDoc.invalid && nombresDoc.errors.required"> Requerido  </small>
                         </div>
                     </div>
                 </div>
                 <!--col nombre-->
                 <div class="col-lg-3 col-12 my-2">
-                    <!--col apellido-->
-                    <label for="apellidos">Apellidos<span class="aster">*</span></label>
+                    <!--col apellidosDoc-->
+                    <label for="apellidosDoc">Apellidos<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input id="apellidos" name='apellidos' class="form-control" type="text" formControlName="apellidos" placeholder="Apellidos">
+                        <input id="apellidosDoc" name='apellidosDoc' class="form-control" type="text" formControlName="apellidosDoc" placeholder="Apellidos">
                         <div id='mensaje'>
-                            <small id="ApellidoHelp" class="form-text text-muted" *ngIf="(apellidos.dirty || apellidos.touched) && apellidos.invalid && apellidos.errors.required"> Requerido  </small>
+                            <small id="apellidosDocHelp" class="form-text text-muted" *ngIf="(apellidosDoc.dirty || apellidosDoc.touched) && apellidosDoc.invalid && apellidosDoc.errors.required"> Requerido  </small>
                         </div>
                     </div>
                 </div>
                 <!--col apellido-->
                 <div class="col-lg-3 col-12 my-2">
-                    <!--col rut-->
-                    <label for="rut">Rut<span class="aster">*</span></label>
+                    <!--col rutDoc-->
+                    <label for="rutDoc">Rut<span class="aster">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input id="rut" name='rut' class="form-control" type="text" formControlName="rut" placeholder="Rut">
+                        <input id="rutDoc" name='rutDoc' class="form-control" type="text" formControlName="rutDoc" placeholder="rutDoc">
                         <div id='mensaje'>
-                            <small id="rutHelp" class="form-text text-muted" *ngIf="(rut.dirty || rut.touched) && rut.invalid && rut.errors.required"> Requerido  </small>
+                            <small id="rutDocHelp" class="form-text text-muted" *ngIf="(rutDoc.dirty || rutDoc.touched) && rutDoc.invalid && rutDoc.errors.required"> Requerido  </small>
                         </div>
                     </div>
                 </div>

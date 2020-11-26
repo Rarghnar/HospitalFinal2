@@ -14,7 +14,7 @@ export class AdminService {
     return this.httpService.get<Admin[]>('/admin/all');
   }
   
-  public addAdmin(admin: any): Observable<Admin> {
+  public addAdmin(admin: Partial<Admin>) {
     return this.httpService.post<Admin>('/admin/add', admin);
   }
 }
