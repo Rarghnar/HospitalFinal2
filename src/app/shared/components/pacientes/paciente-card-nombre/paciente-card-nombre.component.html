@@ -9,12 +9,12 @@
                     <div class="col-lg-12 col-12">
                         <div [ngSwitch]="getUrl()">
                             <div *ngSwitchCase="'/user/lista-paciente'">
-                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente', paciente._id]">Ver paciente</button>-->
-                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente']">Ver paciente</button>
+                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente', pacientes._id]">Ver paciente</button>
+                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente']">Ver paciente</button>-->
                             </div>
                             <div *ngSwitchCase="'/adm/lista-paciente'">
-                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente', paciente._id]">Ver paciente</button>-->
-                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente']">Ver paciente</button>
+                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente', pacientes._id]">Ver paciente</button>
+                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente']">Ver paciente</button>-->
                             </div>
                         </div>
                     </div>

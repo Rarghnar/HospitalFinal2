@@ -15,12 +15,21 @@ export class PacienteService {
   }
   
   public getPacienteById(id: string): Observable<Paciente | null> {
-    return this.httpService.get<Paciente>('/paciente/:id')
+    let path: string = '/paciente/';
+    return this.httpService.get<Paciente>(path+id);
   }
 
 
   public addPaciente(paciente: Partial<Paciente>) {
     return this.httpService.post<Paciente>('/paciente/add', paciente);
+  }
+
+  public deletePaciente(paciente: any): Observable<Paciente>{
+    return this.httpService.post<Paciente>('/paciente/delete', paciente);
+  }
+
+  public modPaciente(paciente: any): Partial<Observable<Paciente>>{
+    return this.httpService.patch<Paciente>('/paciente/patch', paciente);
   }
 
 

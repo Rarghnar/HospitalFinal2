@@ -17,4 +17,8 @@ export class CamaService {
   public addCama(cama: Partial<Cama>){
     return this.httpService.post<Cama>('/cama/add', cama);
   }
+
+  public pathCama(cama: any): Partial<Observable<Cama>>{
+    return this.httpService.patch<Cama>('/cama/patch', cama);
+  }
 }

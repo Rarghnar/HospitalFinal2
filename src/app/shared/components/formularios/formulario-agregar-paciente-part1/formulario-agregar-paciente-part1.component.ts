@@ -5,6 +5,7 @@ import { PacienteService } from '../../../../core/providers/paciente/paciente.se
 import { Paciente } from '../../../../core/models/paciente.model';
 import { CamaService } from '../../../../core/providers/cama/cama.service';
 import { Cama } from '../../../../core/models/cama.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'shared-formulario-agregar-paciente-part1',
@@ -17,8 +18,11 @@ export class FormularioAgregarPacientePart1Component implements OnInit {
   mensaje:string="";
   isDivVisible=false;
 
+  public cama$: Observable<Cama[]>;
+
   constructor(private router: Router, private pacienteProviderService: PacienteService, private camaProviderService: CamaService) { 
     this.checkoutForm = this.createFormGroup();
+    this.cama$ = this.getCama();
   }
 
   
@@ -91,32 +95,15 @@ export class FormularioAgregarPacientePart1Component implements OnInit {
     }
   }
 
-
-  public async addCama() {
-    let cama: Partial<Cama> = {
-      numeroDeCama: this.checkoutForm.get('cama').value,
-      nombrePaciente: this.checkoutForm.get('nombres').value,
-      apellidosPaciente: this.checkoutForm.get('apellidos').value,
-      rutPaciente: this.checkoutForm.get('rut').value,
-      nombreMedicoEncargado: this.checkoutForm.get('nombresDoc').value,
-      apellidosMedicoEncargado: this.checkoutForm.get('apellidosDoc').value,
-      rutMedicoEncargado: this.checkoutForm.get('rutDoc').value,
-      camaLibre: "false"
-    }
-    try {
-      await this.camaProviderService.addCama(cama).toPromise();
-      //alert("Paciente Agregado");
-    } catch (error) {
-      //alert("Error al agregar al Paciente");
-    }
+  getCama(): Observable<Cama[]>{
+    return this.camaProviderService.getCama();
   }
+
 
   public getUrl() {
     return this.router.url;
   }
   
-
-
   navegarCancelar() {
     this.router.navigate(['/user/home'])
   }

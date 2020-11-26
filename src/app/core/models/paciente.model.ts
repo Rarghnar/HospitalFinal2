@@ -1,7 +1,7 @@
 
 
 export interface Paciente{    
-  _id: number; 
+  _id: string; 
   createdAt: Date;
   nombres: string;
   apellidos: string;

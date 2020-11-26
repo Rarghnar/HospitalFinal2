@@ -42,4 +42,11 @@ export class HttpService {
         return data.message as type;
       }));
   }
+
+  public delete<type> (path: string): Observable<type> {
+    return this.httpClient.delete(this.baseUrl + path, this.httpOptions)
+      .pipe(map((data: any) => {
+        return data.message as type;
+      }));
+  }
 }
