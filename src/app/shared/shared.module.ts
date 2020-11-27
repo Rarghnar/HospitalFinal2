@@ -7,7 +7,6 @@ import { PacienteCardComponent } from './components/pacientes/paciente-card/paci
 import { PacienteCardFullComponent } from './components/pacientes/paciente-card-full/paciente-card-full.component';
 import { PacienteCardLibreComponent } from './components/pacientes/paciente-card-libre/paciente-card-libre.component';
 import { PacienteCardNombreComponent } from './components/pacientes/paciente-card-nombre/paciente-card-nombre.component';
-import { FormularioAgregarPacienteComponent } from './components/formularios/formulario-agregar-paciente/formulario-agregar-paciente.component';
 import { FormularioAgregarPacientePart2Component } from './components/formularios/formulario-agregar-paciente-part2/formulario-agregar-paciente-part2.component';
 import { FormularioCheckearPacienteComponent } from './components/formularios/formulario-checkear-paciente/formulario-checkear-paciente.component';
 import { RouterLink, RouterModule } from '@angular/router';
@@ -18,7 +17,7 @@ import { PacienteService } from '../core/providers/paciente/paciente.service';
 
 const componets = [
   NavbarComponent, NavbarUserComponent, FootersComponent,
-  FormularioAgregarPacienteComponent, FormularioAgregarPacientePart2Component,
+  FormularioAgregarPacientePart2Component,
   PacienteCardComponent, PacienteCardFullComponent, PacienteCardLibreComponent,
   PacienteCardNombreComponent, FormularioCheckearPacienteComponent, NavbarAdmComponent,
   FormularioAgregarPacientePart1Component

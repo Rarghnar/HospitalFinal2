@@ -13,8 +13,21 @@ export class EnfermeraService {
   public getEnfermera(): Observable<Enfermera[]> {
     return this.httpService.get<Enfermera[]>('/enfermera/all');
   }
+
+  public getEnfermeraById(id: string): Observable<Enfermera | null>{
+    let path: string = '/enfermera/';
+    return this.httpService.get<Enfermera>(path + id);
+  }
   
-  public addMedico(enfermera: Partial<Enfermera>) {
+  public addEnfermera(enfermera: Partial<Enfermera>) {
     return this.httpService.post<Enfermera>('/enfermera/add', enfermera);
+  }
+
+  public deleteEnfermera(enfermera: any): Observable<Enfermera>{
+    return this.httpService.post<Enfermera>('/enfermera/delete', enfermera);
+  }
+
+  public patchEnfermera(enfermera: any): Partial<Observable<Enfermera>>{
+    return this.httpService.patch<Enfermera>('/enfermera/patch', enfermera);
   }
 }

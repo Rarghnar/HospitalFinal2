@@ -14,7 +14,20 @@ export class HabitacionService {
     return this.httpService.get<Habitacion[]>('/habitacion/all');
   }
   
+  public getHabitacionById(id: string): Observable<Habitacion | null>{
+    let path: string = '/habitacion/';
+    return this.httpService.get<Habitacion>(path + id);
+  }
+  
   public addHabitacion(habitacion: Partial<Habitacion>) {
-    return this.httpService.post<Habitacion>('/habitacion/add', habitacion)
+    return this.httpService.post<Habitacion>('/habitacion/add', habitacion);
+  }
+
+  public deleteHabitacion(habitacion: any): Observable<Habitacion>{
+    return this.httpService.post<Habitacion>('/habitacion/delete', habitacion);
+  }
+
+  public patchHabitacion(habitacion: any): Partial<Observable<Habitacion>>{
+    return this.httpService.patch<Habitacion>('/habitacion/patch', habitacion);
   }
 }

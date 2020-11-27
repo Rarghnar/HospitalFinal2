@@ -41,6 +41,8 @@ export interface Paciente{
   ritmoCardiaco:string;
   nivelInsulina: string;
   enfermeraEncargada: string;
+  enfermeraApellidos: string;
+
   camaLibre: string;
 
 }

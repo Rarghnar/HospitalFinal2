@@ -6,7 +6,8 @@ export interface Enfermera{
     nombres: string;
     apellidos: string;
     sexo: string;
-    telefono:number;
+    telefono: number;
+    direccion: string;
     email: string;
     rut: string;
     contraseña: string;

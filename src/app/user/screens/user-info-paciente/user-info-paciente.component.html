@@ -5,7 +5,7 @@
                 <app-sidebar-user></app-sidebar-user>
             </div>
             <main class="col-lg-7 col-12 my-3">
-                <div class="col-6 offset-0">
+                <div class="col-12 offset-0">
                     <ng-container *ngIf="pacientes$">
                         <app-paciente-card-full [paciente]="pacientes$ | async"></app-paciente-card-full>
                     </ng-container>

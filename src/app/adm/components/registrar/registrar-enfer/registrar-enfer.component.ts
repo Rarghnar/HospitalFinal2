@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EnfermeraService } from '../../../../core/providers/enfermera/enfermera.service';
+import { Enfermera } from '../../../../core/models/enfermera.model';
 
 
 @Component({
@@ -15,24 +17,45 @@ export class RegistrarEnferComponent implements OnInit {
   mensaje:string="";
   isDivVisible=false;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router, private enfermeraProviderService: EnfermeraService) { 
     this.checkoutForm = this.createFormGroup();
   }
 
   ngOnInit(): void {
   }
 
+  public async addEnfermera() {
+    let enfermera: Partial<Enfermera> = {
+      nombres: this.checkoutForm.get('nombre').value,
+      apellidos: this.checkoutForm.get('apellido').value,
+      sexo: this.checkoutForm.get('sexo').value,
+      telefono: this.checkoutForm.get('telefono').value,
+      email: this.checkoutForm.get('usuario').value,
+      rut: this.checkoutForm.get('rut').value,
+      contraseña: this.checkoutForm.get('password').value,
+      contraseñaRepetida: this.checkoutForm.get('password2').value
+    }
+    try {
+      await this.enfermeraProviderService.addEnfermera(enfermera).toPromise();
+      alert("Enfermera Agregada")
+    } catch (error) {
+      alert("Error al agregar enfermera")
+    }
+  }
+
+
   navegarInicio(){
     this.router.navigate(['/screen-home-ingresado']);
   }
 
+  
   createFormGroup() {
     return new FormGroup({
-      usuario: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
+      usuario: new FormControl('', [Validators.required, Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$")]),
       password: new FormControl('',[Validators.required]),
       nombre: new FormControl('',[Validators.required]),
       apellido: new FormControl('',[Validators.required]),
-      rut: new FormControl('',[Validators.required]),
+      rut: new FormControl('',[Validators.required, Validators.pattern("^[0-9]+-[0-9k]{1,1}$")]),
       password2: new FormControl('', [Validators.required]),
       telefono: new FormControl('', [Validators.required]),
       sexo: new FormControl('', [Validators.required]),

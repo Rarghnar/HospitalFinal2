@@ -16,15 +16,11 @@ export class UserInfoPacienteComponent implements OnInit {
 
   constructor(private pacienteProvider: PacienteService, private activedroute: ActivatedRoute) {
     this.id = activedroute.snapshot.params['id'];
-    //this.pacientes$ = this.getPacienteById('id');
   }
 
   ngOnInit(): void {
     this.pacientes$ = this.pacienteProvider.getPacienteById(this.id);
   }
 
-  /*getPacienteById(_id:string): Observable<Paciente> {
-    return this.pacienteProvider.getPacienteById(this.id);
-  }*/
 
 }

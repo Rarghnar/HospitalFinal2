@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <button class="boton btn btn-primary mt-3" type="submit" [disabled]="!checkoutForm.valid">Registrar</button>
+            <button class="boton btn btn-primary mt-3" (click)="addEnfermera()" type="submit" [disabled]="!checkoutForm.valid">Registrar</button>
 
             <div class="dropdown-divider  border-secundary"></div>
             <label for=""> (<span class="aster">*</span>) Campo Obligatorio</label>
