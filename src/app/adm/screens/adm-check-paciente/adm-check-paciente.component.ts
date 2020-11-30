@@ -1,19 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Paciente } from '../../../core/models/paciente.model';
 import { PacienteService } from '../../../core/providers/paciente/paciente.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PacienteServiceService } from '../../../core/services/paciente/paciente-service.service';
 
 @Component({
-  selector: 'app-user-checkear-paciente',
-  templateUrl: './user-checkear-paciente.component.html',
-  styleUrls: ['./user-checkear-paciente.component.less']
+  selector: 'app-adm-check-paciente',
+  templateUrl: './adm-check-paciente.component.html',
+  styleUrls: ['./adm-check-paciente.component.less']
 })
-export class UserCheckearPacienteComponent implements OnInit {
+export class AdmCheckPacienteComponent implements OnInit {
 
-  //public pacientes$: Observable<Paciente>;
   public id: string;
 
 

@@ -27,6 +27,7 @@ import { EnfermeraService } from '../core/providers/enfermera/enfermera.service'
 import { MedicoService } from '../core/providers/medico/medico.service';
 import { CamaService } from '../core/providers/cama/cama.service';
 import { AdminService } from '../core/providers/admin/admin.service';
+import { AdmCheckPacienteComponent } from './screens/adm-check-paciente/adm-check-paciente.component';
 
 const compoment = [
   AdmComponent ,AdmAcercaDeComponent, AdmContactosComponent, AdmHabitacionesLibresComponent,
@@ -51,7 +52,7 @@ const compoment = [
     CamaService,
     AdminService,
   ],
-  declarations: [...compoment]
+  declarations: [...compoment, AdmCheckPacienteComponent]
 
 })
 export class AdmModule { }
