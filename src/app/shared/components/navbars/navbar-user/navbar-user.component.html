@@ -1,0 +1,456 @@
+<!--Usuario Enfermera y Medico-->
+<div [ngSwitch]="getUrl()">
+    <div *ngSwitchCase="'/user/home'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item active">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/contactos'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item active">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/acerca-de'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item active">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/habitaciones-ocupadas'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/habitaciones-libres'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/paciente'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/paciente2'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/lista-paciente'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--agregar ng switch-->
+    <div *ngSwitchCase="'/user/info-paciente'">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/user/perfil">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+    <!--Default-->
+    <div *ngSwitchDefault>
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <i class="far fa-hospital fa-2x" style="color: azure;"> </i>
+            <a class="titulo navbar-brand" href="/user/home">Hospital del Prueblo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <i class="fas fa-home fa-1x" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/home">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <i class="fas fa phone fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/contactos">Contactos</a>
+                    </li>
+                    <i class="fas fa-info fa-1x ml-3" style="color: azure;"></i>
+                    <li class="nav-item">
+                        <a class="letra nav-link" href="/user/acerca-de">Acerca de</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Busqueda">
+                    <li class="btn btn-info my-2 my-sm-0 mr-2" type="submit">
+                        <i class="lupa fas fa-search fa-1x"></i>
+                    </li>
+                </form>
+                <i class="inicio fas fa-user fa-2x ml-3" style="color: azure;"></i>
+                <form class="form-inline ml-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nombre Personal</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <!--<button class="dropdown-item" [routerLink]="['/user/perfil', medicos._id]">Perfil</button>-->
+                            <!--<a class="dropdown-item" href="/user/perfil">Perfil</a>-->
+                            <a class="dropdown-item" [routerLink]="['/user/perfil']">Perfil</a>
+                            <a class="dropdown-item" [routerLink]="['/user/list']">list</a>
+                            <div class="dropdown-divider"></div>
+                            <form action="/logout" class="logout-form">
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </div>
+</div>

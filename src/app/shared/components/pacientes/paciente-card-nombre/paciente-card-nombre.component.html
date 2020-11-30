@@ -1,21 +1,25 @@
 <div class="card mb-2">
     <div class="card-body mb-1">
         <div class="row ">
-            <div class="col-lg-12 col-12 text-center">
-                <p class="font-weight-bold">{{paciente.nombre}}</p>
-                <p class="font-weight-bold">Cama: {{paciente.habitacion}}</p>
-                <div class="col-lg-12 col-12">
-                    <div [ngSwitch]="getUrl()">
-                        <div *ngSwitchCase="'/user/lista-paciente'">
-                            <!--<button type="button" class="btn btn-outline-success" [routerLink]="['/screen-info-paciente', paciente._id]">Ver paciente</button>-->
-                        </div>
-                        <div *ngSwitchCase="'/adm/lista-paciente'">
-                            <!--<button type="button" class="btn btn-outline-success" [routerLink]="['/screen-info-paciente-admin', paciente._id]">Ver paciente</button>-->
+            <div class="col-lg-4 col-12 text-center my-2 " *ngFor="let pacientes of paciente">
+                <div class="card">
+                    <p class="font-weight-bold">Nombre :{{pacientes.nombres}}</p>
+                    <p class="font-weight-bold">Apellido: {{pacientes.apellidos}}</p>
+                    <p class="font-weight-bold">Sexo: {{pacientes.sexo}}</p>
+                    <div class="col-lg-12 col-12">
+                        <div [ngSwitch]="getUrl()">
+                            <div *ngSwitchCase="'/user/lista-paciente'">
+                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente', pacientes._id]">Ver paciente</button>
+                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente']">Ver paciente</button>-->
+                            </div>
+                            <div *ngSwitchCase="'/adm/lista-paciente'">
+                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente', pacientes._id]">Ver paciente</button>
+                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente']">Ver paciente</button>-->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    // asdjasjdk
+</div>

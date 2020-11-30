@@ -1,21 +1,18 @@
 <div class="card mb-2">
     <div class="card-body mb-1">
         <div class="row ">
-            <div class="col-lg-12 col-12 text-left">
-                <div [ngSwitch]="paciente.color">
-                    <div *ngSwitchCase="'red'">
-                        <p class="font-weight-bold"> Codigo de cama: {{paciente.habitacion}}</p>
-                        <p class="text mb-1"> <span class="font-weight-bold">Nombre: </span> {{paciente.nombre}}</p>
-                        <p class="text mb-1"><span class="font-weight-bold">Rut:</span> {{paciente.rut}}</p>
+            <div class="col-lg-4 col-12 text-left my-2 " *ngFor="let pacientes of paciente">
+            <!--     <div [ngSwitch]="paciente.camaLibre">
+                    <div *ngSwitchCase="'ocupado'"> -->
+                        <p class="font-weight-bold"> Codigo de cama: {{pacientes.habitacion}}</p>
+                        <p class="text mb-1"> <span class="font-weight-bold">Nombre: </span> {{pacientes.nombres}}</p>
+                        <p class="text mb-1"><span class="font-weight-bold">Rut:</span> {{pacientes.rut}}</p>
 
-                        <p class="text mb-1"><span class="font-weight-bold">Medico Encargado:</span> {{paciente.medicoEncargado}}</p>
-                        <!-- <p class="text mb-1"><span class="font-weight-bold">Ultimo Chequeo:</span> {{paciente.ultimoChequeo}}</p> -->
-                        <!-- <p class="text mb-5"><span class="font-weight-bold">Chequeado Por:</span> {{paciente.chequeadoPor}}</p> -->
+                        <p class="text mb-1"><span class="font-weight-bold">Medico Encargado:</span> {{pacientes.enfermeraEncargada}}</p>
                         <i class="fas fa-circle" style="color: red"></i>
                         <p class="text mb-1"> <span class="font-weight-bold">Cama ocupada</span> </p>
 
                         <div class="col-lg-12 col-12 text-center">
-                            <!--     <button type="button" class="btn btn-success m-2">Realizar chequeo</button> -->
                             <button type="button" class="btn btn-outline-success m-2">Retirar paciente</button>
 
                         </div>
@@ -23,5 +20,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+<!--     </div>
+</div> -->

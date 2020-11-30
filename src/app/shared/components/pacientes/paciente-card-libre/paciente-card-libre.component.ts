@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class PacienteCardLibreComponent implements OnInit {
 
   @Input()
-  public paciente: Paciente;
+  paciente: Paciente[];
 
   constructor(private router: Router) { }
 

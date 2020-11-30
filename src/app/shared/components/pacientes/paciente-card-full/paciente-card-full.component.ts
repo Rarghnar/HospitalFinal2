@@ -9,7 +9,7 @@ import { Paciente } from '../../../../core/models/paciente.model';
 export class PacienteCardFullComponent implements OnInit {
 
   @Input()
-  public paciente: Paciente;
+  paciente: Paciente;
 
   constructor() { }
 

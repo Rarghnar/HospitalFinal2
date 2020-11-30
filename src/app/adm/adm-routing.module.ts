@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserComponent } from '../user/user.component';
+
 import { AdmHomeScreenComponent } from './screens/adm-home-screen/adm-home-screen.component';
 import { AdmAcercaDeComponent } from './screens/adm-acerca-de/adm-acerca-de.component';
 import { AdmContactosComponent } from './screens/adm-contactos/adm-contactos.component';
@@ -12,11 +12,12 @@ import { AdmPacienteComponent } from './screens/adm-paciente/adm-paciente.compon
 import { AdmPaciente2Component } from './screens/adm-paciente2/adm-paciente2.component';
 import { AdmRegistrarEnferComponent } from './screens/adm-registrar-enfer/adm-registrar-enfer.component';
 import { AdmRegistrarMedicComponent } from './screens/adm-registrar-medic/adm-registrar-medic.component';
+import { AdmComponent } from './adm.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: UserComponent,
+    component: AdmComponent,
     children: [
       { path: 'home', component: AdmHomeScreenComponent },
       { path: 'acerca-de', component: AdmAcercaDeComponent },
@@ -28,7 +29,9 @@ const routes: Routes = [
       { path: 'paciente', component: AdmPacienteComponent },
       { path: 'paciente2', component: AdmPaciente2Component },
       { path: 'registrar-enfer', component: AdmRegistrarEnferComponent },
-      { path: 'registrar-medic', component: AdmRegistrarMedicComponent}
+      { path: 'registrar-medic', component: AdmRegistrarMedicComponent },
+      { path: 'info-paciente/:id', component: AdmInfoPacienteComponent },
+
     ]
   }
 ];

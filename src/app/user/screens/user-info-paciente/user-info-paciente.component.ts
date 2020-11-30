@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Paciente } from '@core/models/paciente.model';
-import { PacienteService } from '../../../core/services/paciente/paciente.service';
+import { PacienteService } from '../../../core/providers/paciente/paciente.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user-info-paciente',
@@ -10,15 +11,16 @@ import { PacienteService } from '../../../core/services/paciente/paciente.servic
 })
 export class UserInfoPacienteComponent implements OnInit {
 
-  public id: number;
-  public paciente: Paciente;
+  public id: string;
+  public pacientes$: Observable<Paciente>;
 
-  constructor(private pacienteService: PacienteService, private activedroute: ActivatedRoute) {
-    this.id = activedroute.snapshot.params['is'];
-   }
+  constructor(private pacienteProvider: PacienteService, private activedroute: ActivatedRoute) {
+    this.id = activedroute.snapshot.params['id'];
+  }
 
   ngOnInit(): void {
-    this.paciente = this.pacienteService.getPacienteById(this.id);
+    this.pacientes$ = this.pacienteProvider.getPacienteById(this.id);
   }
+
 
 }

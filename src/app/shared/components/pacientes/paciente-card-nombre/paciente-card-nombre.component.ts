@@ -10,22 +10,14 @@ import { Router } from '@angular/router';
 export class PacienteCardNombreComponent implements OnInit {
 
   @Input()
-  public paciente: Paciente
+  paciente: Paciente[];
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  navegarinfo1() {
-    this.router.navigate(['/user/paciente']);
-  }
-
-  naviegarinfo2() {
-    this.router.navigate(['/adm/paciente']);
-  }
-
-  public getUrl(): String {
+  public getUrl(): string {
     return this.router.url;
   }
 }

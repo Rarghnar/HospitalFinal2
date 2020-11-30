@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ShoperService } from "@core/services/shoper/shoper.service";
+//import { ShoperService } from "@core/services/shoper/shoper.service";
 import { Shoper } from '@models/shoper.model';
 import { Router } from '@angular/router';
 
@@ -23,7 +23,7 @@ export class UserHomeScreenComponent implements OnInit {
   }
 
   navegarHabitaciones() {
-    this.router.navigate(['/user/habitaciones']);
+    this.router.navigate(['/user/habitaciones-ocupadas']);
   }
 
  
