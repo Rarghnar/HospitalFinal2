@@ -27,7 +27,8 @@ export class HabitacionService {
     return this.httpService.post<Habitacion>('/habitacion/delete', habitacion);
   }
 
-  public patchHabitacion(habitacion: any): Partial<Observable<Habitacion>>{
-    return this.httpService.patch<Habitacion>('/habitacion/patch', habitacion);
+  public patchHabitacion(id: string, habitacion: any): Partial<Observable<Habitacion>>{
+    let path: string = '/habitacion/';
+    return this.httpService.patch<Habitacion>(path + id, habitacion);
   }
 }

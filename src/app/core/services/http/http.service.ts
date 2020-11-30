@@ -36,7 +36,7 @@ export class HttpService {
       }));
   }
 
-  public patch<type>(path: string, body: any) {
+  public patch<type>(path: string, body: any):Observable<type> {
     return this.httpClient.patch<type>(this.baseUrl + path, body, this.httpOptions)
       .pipe(map((data: any) => {
         return data.message as type;

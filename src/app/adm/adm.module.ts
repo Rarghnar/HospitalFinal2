@@ -21,6 +21,12 @@ import { RegistrarEnferComponent } from './components/registrar/registrar-enfer/
 import { RegistrarMedicComponent } from './components/registrar/registrar-medic/registrar-medic.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SupportProviderService } from '../core/providers/support-provider.service';
+import { HabitacionService } from '../core/providers/habitacion/habitacion.service';
+import { PacienteService } from '../core/providers/paciente/paciente.service';
+import { EnfermeraService } from '../core/providers/enfermera/enfermera.service';
+import { MedicoService } from '../core/providers/medico/medico.service';
+import { CamaService } from '../core/providers/cama/cama.service';
+import { AdminService } from '../core/providers/admin/admin.service';
 
 const compoment = [
   AdmComponent ,AdmAcercaDeComponent, AdmContactosComponent, AdmHabitacionesLibresComponent,
@@ -37,7 +43,13 @@ const compoment = [
     SharedModule,
     ReactiveFormsModule
   ], providers: [
-    SupportProviderService
+    SupportProviderService,
+    HabitacionService,
+    PacienteService,
+    EnfermeraService,
+    MedicoService,
+    CamaService,
+    AdminService,
   ],
   declarations: [...compoment]
 

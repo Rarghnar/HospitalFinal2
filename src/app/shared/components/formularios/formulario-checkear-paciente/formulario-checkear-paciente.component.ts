@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Paciente } from '../../../../core/models/paciente.model';
+import { PacienteService } from '../../../../core/providers/paciente/paciente.service';
 
 
 @Component({
@@ -11,12 +13,17 @@ import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angula
 export class FormularioCheckearPacienteComponent implements OnInit {
 
  
+  @Input()
+  public paciente: Paciente;
+  public id: string;
+
   checkoutForm: FormGroup;
   mensaje:string="";
   isDivVisible=false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private pacienteProviderService: PacienteService,private activedroute: ActivatedRoute) {
     this.checkoutForm = this.createFormGroup();
+    this.id = activedroute.snapshot.params['id'];
    }
 
   public getUrl() {
@@ -38,14 +45,22 @@ export class FormularioCheckearPacienteComponent implements OnInit {
       nombres: new FormControl('', [Validators.required]),
       rut: new FormControl('', [Validators.required]),
       apellidos: new FormControl('', [Validators.required]),
-      fechaNac: new FormControl('', [Validators.required]),
-      sexo: new FormControl('', [Validators.required]),
-      direccion: new FormControl('', [Validators.required]),
-      edad: new FormControl('', [Validators.required]),
-      nacionalidad: new FormControl('', [Validators.required]),
-      ciudad: new FormControl('', [Validators.required]),
       //password: new FormControl('',[Validators.required])
     });
+  }
+
+  public async modPaciente() {
+    let paciente = {
+      nombres: this.checkoutForm.get('nombres').value,
+      apellidos: this.checkoutForm.get('apellidos').value,
+      rut: this.checkoutForm.get('rut').value,
+    }
+    try {
+      await  this.pacienteProviderService.modPaciente(this.id, paciente);
+      alert("Paciente Agregado");
+    } catch (error) {
+      alert("Error al agregar al Paciente");
+    }
   }
 
   onSubmit(){
@@ -56,11 +71,5 @@ export class FormularioCheckearPacienteComponent implements OnInit {
   get nombres() { return this.checkoutForm.get('nombres'); }
   get rut() { return this.checkoutForm.get('rut'); }
   get apellidos() { return this.checkoutForm.get('apellidos'); }
-  get fechaNac() { return this.checkoutForm.get('fechaNac');}
-  get sexo() { return this.checkoutForm.get('sexo');}
-  get direccion() { return this.checkoutForm.get('direccion');}
-  get edad() { return this.checkoutForm.get('edad');}
-  get nacionalidad() { return this.checkoutForm.get('nacionalidad');}
-  get ciudad() { return this.checkoutForm.get('ciudad');}
 
 }

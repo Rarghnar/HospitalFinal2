@@ -23,7 +23,7 @@ export class UserHomeScreenComponent implements OnInit {
   }
 
   navegarHabitaciones() {
-    this.router.navigate(['/user/habitaciones-ocupadas']);
+    this.router.navigate(['/user/habitaciones-libres']);
   }
 
  

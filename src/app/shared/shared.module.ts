@@ -35,4 +35,5 @@ const componets = [
   ],
   exports: [...componets]
 })
+  
 export class SharedModule { }

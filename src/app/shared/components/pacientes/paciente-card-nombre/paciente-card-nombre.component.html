@@ -2,10 +2,13 @@
     <div class="card-body mb-1">
         <div class="row ">
             <div class="col-lg-4 col-12 text-center my-2 " *ngFor="let pacientes of paciente">
-                <div class="card">
-                    <p class="font-weight-bold">Nombre :{{pacientes.nombres}}</p>
-                    <p class="font-weight-bold">Apellido: {{pacientes.apellidos}}</p>
-                    <p class="font-weight-bold">Sexo: {{pacientes.sexo}}</p>
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header font-weight-bold">Paciente</div>
+                    <div class="card-body">
+                        <p class="text mb-1"> <span class="font-weight-bold">Nombres: </span> {{pacientes.nombres}}</p>
+                        <p class="text mb-1"> <span class="font-weight-bold">Apellidos: </span> {{pacientes.apellidos}}</p>
+                        <p class="text mb-1"> <span class="font-weight-bold">RUT: </span> {{pacientes.rut}}</p>
+                    </div>
                     <div class="col-lg-12 col-12">
                         <div [ngSwitch]="getUrl()">
                             <div *ngSwitchCase="'/user/lista-paciente'">

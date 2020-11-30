@@ -23,6 +23,10 @@ import { UserListScreenComponent } from './screens/user-list-screen/user-list-sc
 import { SupportListComponent } from './components/support-list/support-list.component';
 import { HabitacionService } from '../core/providers/habitacion/habitacion.service';
 import { PacienteService } from '../core/providers/paciente/paciente.service';
+import { EnfermeraService } from '../core/providers/enfermera/enfermera.service';
+import { MedicoService } from '../core/providers/medico/medico.service';
+import { CamaService } from '../core/providers/cama/cama.service';
+import { AdminService } from '../core/providers/admin/admin.service';
 
 const component = [
   UserComponent, UserAcercaDeComponent, UserContactosComponent, UserHabitacionesOcupadasComponent,
@@ -40,7 +44,11 @@ const component = [
     ReactiveFormsModule
   ], providers: [
     HabitacionService,
-    PacienteService
+    PacienteService,
+    EnfermeraService,
+    MedicoService,
+    CamaService,
+    AdminService,
   ],
   declarations: [...component]
 })

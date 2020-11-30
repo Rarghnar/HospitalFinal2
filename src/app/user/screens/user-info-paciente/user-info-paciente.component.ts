@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   templateUrl: './user-info-paciente.component.html',
   styleUrls: ['./user-info-paciente.component.less']
 })
+  
 export class UserInfoPacienteComponent implements OnInit {
 
   public id: string;

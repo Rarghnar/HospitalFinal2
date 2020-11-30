@@ -2,7 +2,6 @@
     <div class="card-body mb-1">
         <div class="row ">
             <div class="col-lg-6 col-12 text-left">
-                <p class="font-weight-bold"> Codigo de cama: {{paciente.cama}}</p>
                 <p class="text mb-1"> <span class="font-weight-bold">Nombres: </span> {{paciente.nombres}} {{paciente.apellidos}}</p>
                 <p class="text mb-1"><span class="font-weight-bold">Fecha de Nacimiento:</span> {{paciente.diaNacimiento}}/ {{paciente.mesNacimiento}}/ {{paciente.anioNacimiento}}</p>
                 <p class="text mb-1"><span class="font-weight-bold">Sexo:</span> {{paciente.sexo}}</p>
@@ -33,8 +32,8 @@
                 <p class="text mb-1"><span class="font-weight-bold">Nivel Insulina:</span> {{paciente.nivelInsulina}}</p>
             </div>
             <div class="col-lg-10 col-12 text-center ml-4">
-                <button type="button" class="btn btn-success m-2">Realizar chequeo</button>
-                <button type="button" class="btn btn-success m-2">Retirar paciente</button>
+                <button type="button" class="btn btn-success m-2" (click)="getPaciente()" [routerLink]="['/user/check-paciente', paciente._id]">Realizar chequeo Paciente</button>
+                <button type="button" class="btn btn-success m-2" (click)="deletePaciente()">Retirar paciente</button>
             </div>
         </div>
     </div>
@@ -53,7 +52,7 @@
                 <p class="font-weight-bold"> Información del Representante</p>
                 <p class="text mb-1"><span class="font-weight-bold">Nombre: </span> {{paciente.nombresRepresentante}} {{paciente.apellidosRepresentante}}</p>
                 <p class="text mb-1"><span class="font-weight-bold">Telefono:</span> {{paciente.telefonoRepresentante}}</p>
-                <p class="text mb-1"><span class="font-weight-bold">Nacionalidad:</span> {{paciente.nacionalidad}}/ {{paciente.mesNacimiento}}/ {{paciente.anioNacimiento}}</p>
+                <p class="text mb-1"><span class="font-weight-bold">Rut:</span> {{paciente.rutRepresentante}}</p>
             </div>
         </div>
     </div>

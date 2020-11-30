@@ -4,6 +4,7 @@ export interface Cama{
     _id:string;
     createdAt:Date,
     numeroDeCama?: Number,
+
     nombrePaciente?: string;
     apellidosPaciente?: string;
     rutPaciente?:string;
@@ -13,6 +14,8 @@ export interface Cama{
     nombreEnfermeraEncargada?:string;
     rutEnfermeraEncargada?: string;
     camaLibre: string;
+
+    idPaciente: string;
 
 
 }
