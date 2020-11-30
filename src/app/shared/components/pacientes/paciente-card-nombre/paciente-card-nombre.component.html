@@ -1,16 +1,24 @@
 <div class="card mb-2">
     <div class="card-body mb-1">
         <div class="row ">
-            <div class="col-lg-12 col-12 text-center">
-                <p class="font-weight-bold">{{paciente.nombre}}</p>
-                <p class="font-weight-bold">Cama: {{paciente.habitacion}}</p>
-                <div class="col-lg-12 col-12">
-                    <div [ngSwitch]="getUrl()">
-                        <div *ngSwitchCase="'/user/lista-paciente'">
-                            <button type="button" class="btn btn-outline-success" [routerLink]="['/user/info-paciente', paciente._id]">Ver paciente</button>
-                        </div>
-                        <div *ngSwitchCase="'/adm/lista-paciente'">
-                            <button type="button" class="btn btn-outline-success" [routerLink]="['/adm/info-paciente', paciente._id]">Ver paciente</button>
+            <div class="col-lg-4 col-12 text-center my-2 " *ngFor="let pacientes of paciente">
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header font-weight-bold">Paciente</div>
+                    <div class="card-body">
+                        <p class="text mb-1"> <span class="font-weight-bold">Nombres: </span> {{pacientes.nombres}}</p>
+                        <p class="text mb-1"> <span class="font-weight-bold">Apellidos: </span> {{pacientes.apellidos}}</p>
+                        <p class="text mb-1"> <span class="font-weight-bold">RUT: </span> {{pacientes.rut}}</p>
+                    </div>
+                    <div class="col-lg-12 col-12">
+                        <div [ngSwitch]="getUrl()">
+                            <div *ngSwitchCase="'/user/lista-paciente'">
+                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente', pacientes._id]">Ver paciente</button>
+                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/user/info-paciente']">Ver paciente</button>-->
+                            </div>
+                            <div *ngSwitchCase="'/adm/lista-paciente'">
+                                <button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente', pacientes._id]">Ver paciente</button>
+                                <!--<button type="button" class="btn btn-outline-success my-2" [routerLink]="['/adm/info-paciente']">Ver paciente</button>-->
+                            </div>
                         </div>
                     </div>
                 </div>

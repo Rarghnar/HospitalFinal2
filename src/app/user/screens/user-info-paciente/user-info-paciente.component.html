@@ -1,13 +1,13 @@
 <div class="background">
-    <div class="container-fluid mt-4">
+    <div class="container-fluid">
         <div class="row">
             <div class="sideBarSesionIn col-lg-2 col-12 bd-sidebar my-3">
                 <app-sidebar-user></app-sidebar-user>
             </div>
             <main class="col-lg-7 col-12 my-3">
                 <div class="col-12 offset-0">
-                    <ng-container *ngIf="paciente">
-                        <app-paciente-card-full [paciente]="paciente"></app-paciente-card-full>
+                    <ng-container *ngIf="pacientes$">
+                        <app-paciente-card-full [paciente]="pacientes$ | async"></app-paciente-card-full>
                     </ng-container>
                 </div>
             </main>

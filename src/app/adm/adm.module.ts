@@ -19,12 +19,22 @@ import { AdmRegistrarEnferComponent } from './screens/adm-registrar-enfer/adm-re
 import { AdmRegistrarMedicComponent } from './screens/adm-registrar-medic/adm-registrar-medic.component';
 import { RegistrarEnferComponent } from './components/registrar/registrar-enfer/registrar-enfer.component';
 import { RegistrarMedicComponent } from './components/registrar/registrar-medic/registrar-medic.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SupportProviderService } from '../core/providers/support-provider.service';
+import { HabitacionService } from '../core/providers/habitacion/habitacion.service';
+import { PacienteService } from '../core/providers/paciente/paciente.service';
+import { EnfermeraService } from '../core/providers/enfermera/enfermera.service';
+import { MedicoService } from '../core/providers/medico/medico.service';
+import { CamaService } from '../core/providers/cama/cama.service';
+import { AdminService } from '../core/providers/admin/admin.service';
+import { AdmCheckPacienteComponent } from './screens/adm-check-paciente/adm-check-paciente.component';
 
 const compoment = [
   AdmComponent ,AdmAcercaDeComponent, AdmContactosComponent, AdmHabitacionesLibresComponent,
   AdmHabitacionesOcupadasComponent, AdmHomeScreenComponent, AdmInfoPacienteComponent,
   AdmListaPacienteComponent, AdmPacienteComponent, AdmPaciente2Component,
-  SidebarAdmComponent, AdmRegistrarEnferComponent, AdmRegistrarMedicComponent
+  SidebarAdmComponent, AdmRegistrarEnferComponent, AdmRegistrarMedicComponent,
+  RegistrarEnferComponent, RegistrarMedicComponent
 ]
 
 @NgModule({
@@ -32,8 +42,17 @@ const compoment = [
     CommonModule,
     AdmRoutingModule,
     SharedModule,
+    ReactiveFormsModule
+  ], providers: [
+    SupportProviderService,
+    HabitacionService,
+    PacienteService,
+    EnfermeraService,
+    MedicoService,
+    CamaService,
+    AdminService,
   ],
-  declarations: [...compoment, RegistrarEnferComponent, RegistrarMedicComponent]
+  declarations: [...compoment, AdmCheckPacienteComponent]
 
 })
 export class AdmModule { }

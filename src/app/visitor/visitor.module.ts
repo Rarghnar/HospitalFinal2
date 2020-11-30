@@ -10,6 +10,7 @@ import { VisitorInicioSesionComponent } from './screens/visitor-inicio-sesion/vi
 import { InicioSesionUserComponent } from './components/inicio-sesion-user/inicio-sesion-user.component';
 import { InicioSesionAdmComponent } from './components/inicio-sesion-adm/inicio-sesion-adm.component';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SupportProviderService } from '../core/providers/support-provider.service';
 
 
 const component = [
@@ -23,7 +24,9 @@ const component = [
     VisitorRoutingModule,
     SharedModule,
     ReactiveFormsModule
+  ], providers: [
+    SupportProviderService
   ],
-  declarations: [...component ]
+  declarations: [...component ],
 })
 export class VisitorModule { }

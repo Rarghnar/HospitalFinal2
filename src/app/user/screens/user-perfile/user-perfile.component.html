@@ -1,0 +1,28 @@
+<div class="background">
+    <div class="container-fluid">
+        <div class="row">
+            <!--row-->
+            <div class="sideBarSesionIn col-lg-2 col-12 bd-sidebar mt-3">
+                <!--col sidebar-->
+                <app-sidebar-user></app-sidebar-user>
+            </div>
+            <!--col sidebar-->
+            <main class="col-lg-7 col-12 mt-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-12">
+                            <div class="card">
+                                <div class="col-lg-4 col-12" *ngFor="let medico of medico$">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="col-lg-3 col-12 my-5">
+                <img alt="logo" src="assets/images/Imagen1.png" class="img-fluid">
+            </div>
+        </div>
+        <!--row-->
+    </div>
+</div>

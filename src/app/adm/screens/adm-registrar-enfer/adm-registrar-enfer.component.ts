@@ -13,3 +13,5 @@ export class AdmRegistrarEnferComponent implements OnInit {
   }
 
 }
+
+

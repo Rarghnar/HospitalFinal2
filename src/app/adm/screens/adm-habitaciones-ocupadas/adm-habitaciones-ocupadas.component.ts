@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Paciente } from '@core/models/paciente.model';
-import { PacienteService } from '../../../core/services/paciente/paciente.service';
+import { PacienteService } from '../../../core/providers/paciente/paciente.service';
 
 @Component({
   selector: 'app-adm-habitaciones-ocupadas',
@@ -14,7 +14,7 @@ export class AdmHabitacionesOcupadasComponent implements OnInit {
   constructor(private pacienteService: PacienteService) { }
 
   ngOnInit(): void {
-    this.pacientes = this.pacienteService.getALLPacientes();
+    //this.pacientes = this.pacienteService.getALLPacientes();
   }
 
 }

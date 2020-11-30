@@ -1,0 +1,111 @@
+<div class="background">
+    <div class="container-fluid">
+        <div class="row">
+            <!--row-->
+            <div class="sideBarSesionIn col-lg-2 col-12 bd-sidebar mt-3">
+                <!--col sidebar-->
+                <app-sidebar-adm></app-sidebar-adm>
+            </div>
+            <!--col sidebar-->
+            <main class="col-lg-7 col-12 mt-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <!--<shared-formulario-checkear-paciente [paciente]="pacientes$ | async"></shared-formulario-checkear-paciente>-->
+                                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="px-4 pt-3">
+                                    <h1>Checkear Paciente</h1>
+                                    <div class="row my-4">
+                                        <!--row-->
+                                        <div class="col-lg-3 col-12 my-2">
+                                            <!--col nombre-->
+                                            <label for="ultimoChequeo">Hora del Checkeo(*)</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                                <input id="ultimoChequeo" name='ultimoChequeo' class="form-control" type="text" formControlName="ultimoChequeo" placeholder="ultimoChequeo">
+                                                <div id='mensaje'>
+                                                    <small id="nombreoHelp" class="form-text text-muted" *ngIf="(ultimoChequeo.dirty || ultimoChequeo.touched) && ultimoChequeo.invalid && ultimoChequeo.errors.required"> Requerido  </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--col nombre-->
+                                        <div class="col-lg-3 col-12 my-2">
+                                            <!--col apellido-->
+                                            <label for="chequeadoPor">Chequeado Por(*)</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                                <input id="chequeadoPor" name='chequeadoPor' class="form-control" type="text" formControlName="chequeadoPor" placeholder="chequeadoPor">
+                                                <div id='mensaje'>
+                                                    <small id="ApellidoHelp" class="form-text text-muted" *ngIf="(chequeadoPor.dirty || chequeadoPor.touched) && chequeadoPor.invalid && chequeadoPor.errors.required"> Requerido  </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row my-4">
+
+                                        <!--col apellido-->
+                                        <div class="col-lg-3 col-12 my-2">
+                                            <!--col presionArterial-->
+                                            <label for="presionArterial">Presión Arterial(*)</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                                <input id="presionArterial" name='presionArterial' class="form-control" type="text" formControlName="presionArterial" placeholder="presionArterial">
+                                                <div id='mensaje'>
+                                                    <small id="presionArterialHelp" class="form-text text-muted" *ngIf="(presionArterial.dirty || presionArterial.touched) && presionArterial.invalid && presionArterial.errors.required"> Requerido  </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-12 my-2">
+                                            <!--col ritmoCardiaco-->
+                                            <label for="ritmoCardiaco">Ritmo Cardiaco(*)</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                                <input id="ritmoCardiaco" name='ritmoCardiaco' class="form-control" type="text" formControlName="ritmoCardiaco" placeholder="ritmoCardiaco">
+                                                <div id='mensaje'>
+                                                    <small id="ritmoCardiacolHelp" class="form-text text-muted" *ngIf="(ritmoCardiaco.dirty || ritmoCardiaco.touched) && ritmoCardiaco.invalid && presionArterial.errors.required"> Requerido  </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-12 my-2">
+                                            <!--col nivelInsulina-->
+                                            <label for="nivelInsulina">Nivel de Insulina(*)</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                                <input id="nivelInsulina" name='nivelInsulina' class="form-control" type="text" formControlName="nivelInsulina" placeholder="nivelInsulina">
+                                                <div id='mensaje'>
+                                                    <small id="presionArterialHelp" class="form-text text-muted" *ngIf="(nivelInsulina.dirty || nivelInsulina.touched) && nivelInsulina.invalid && presionArterial.errors.required"> Requerido  </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--col nivelInsulina-->
+                                    </div>
+                                    <div class="row my-4">
+                                        <!--row-->
+                                    </div>
+                                    <!--row-->
+                                    <!--boton agregar-->
+                                    <!--<div *ngSwitchCase="'/user/check-paciente/:id'">-->
+                                    <button class="btn btn-primary my-3" (click)="modPaciente()" type="submit" [disabled]="!checkoutForm.valid">Siguiente</button>
+                                    <!--</div>-->
+                                    <label for=""> (*) Campo Obligatorio</label>
+
+                                    <!--boton agregar-->
+                                    <div id='mensaje' [style.visibility]="isDivVisible ? 'visible' : 'hidden'" class="alert alert-success" role="alert">{{mensaje}}</div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="col-lg-3 col-12 my-5">
+                <img alt="logo" src="assets/images/Imagen1.png" class="img-fluid">
+            </div>
+        </div>
+        <!--row-->
+    </div>
+</div>

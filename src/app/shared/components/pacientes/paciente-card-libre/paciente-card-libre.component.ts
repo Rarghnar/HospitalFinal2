@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Paciente } from '../../../../core/models/paciente.model';
 import { Router } from '@angular/router';
+import { Cama } from '../../../../core/models/cama.model';
 
 @Component({
   selector: 'app-paciente-card-libre',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class PacienteCardLibreComponent implements OnInit {
 
   @Input()
-  public paciente: Paciente;
+  cama: Cama[];
 
   constructor(private router: Router) { }
 

@@ -10,6 +10,9 @@ import { UserInfoPacienteComponent } from './screens/user-info-paciente/user-inf
 import { UserListaPacienteComponent } from './screens/user-lista-paciente/user-lista-paciente.component';
 import { UserPacienteComponent } from './screens/user-paciente/user-paciente.component';
 import { UserPaciente2Component } from './screens/user-paciente2/user-paciente2.component';
+import { UserPerfileComponent } from './screens/user-perfile/user-perfile.component';
+import { UserListScreenComponent } from './screens/user-list-screen/user-list-screen.component';
+import { UserCheckearPacienteComponent } from './screens/user-checkear-paciente/user-checkear-paciente.component';
 
 const routes: Routes = [
   {
@@ -26,6 +29,9 @@ const routes: Routes = [
       { path: 'paciente', component: UserPacienteComponent },
       { path: 'paciente2', component: UserPaciente2Component },
       { path: 'info-paciente/:id', component: UserInfoPacienteComponent },
+      { path: 'perfil', component: UserPerfileComponent },
+      { path: 'list', component: UserListScreenComponent},
+      { path: 'check-paciente/:id', component: UserCheckearPacienteComponent},
 
     ]
   }

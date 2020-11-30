@@ -41,16 +41,16 @@ export class FormularioAgregarPacientePart2Component implements OnInit {
 
   createFormGroup() {
     return new FormGroup({
-      nombres: new FormControl('', [Validators.required]),
-      rut: new FormControl('', [Validators.required]),
-      apellidos: new FormControl('', [Validators.required]),
+      nombresDoc: new FormControl('', [Validators.required]),
+      rutDoc: new FormControl('', [Validators.required]),
+      apellidosDoc: new FormControl('', [Validators.required]),
       atencion: new FormControl('', [Validators.required]),
       motivo: new FormControl('', [Validators.required]),
       fechaIng: new FormControl('', [Validators.required]),
       horaIng: new FormControl('', [Validators.required]),
-      fechaSal: new FormControl('', [Validators.required]),
-      horaSal: new FormControl('', [Validators.required]),
-      piso: new FormControl('', [Validators.required]),
+      //fechaSal: new FormControl('', [Validators.required]),
+      //horaSal: new FormControl('', [Validators.required]),
+      cama: new FormControl('', [Validators.required]),
       habitacion: new FormControl('', [Validators.required]),
       causa: new FormControl('', [Validators.required]),
       //password: new FormControl('',[Validators.required])
@@ -62,16 +62,16 @@ export class FormularioAgregarPacientePart2Component implements OnInit {
     this.isDivVisible=true;
   }
 
-  get nombres() { return this.checkoutForm.get('nombres'); }
-  get rut() { return this.checkoutForm.get('rut'); }
-  get apellidos() { return this.checkoutForm.get('apellidos'); }
+  get nombresDoc() { return this.checkoutForm.get('nombresDoc'); }
+  get rutDoc() { return this.checkoutForm.get('rutDoc'); }
+  get apellidosDoc() { return this.checkoutForm.get('apellidosDoc'); }
   get atencion() { return this.checkoutForm.get('atencion');}
   get motivo() { return this.checkoutForm.get('motivo');}
   get fechaIng() { return this.checkoutForm.get('fechaIng');}
   get horaIng() { return this.checkoutForm.get('horaIng');}
-  get fechaSal() { return this.checkoutForm.get('fechaSal');}
-  get horaSal() { return this.checkoutForm.get('horaSal');}
-  get piso() { return this.checkoutForm.get('piso');}
+  //get fechaSal() { return this.checkoutForm.get('fechaSal');}
+  //get horaSal() { return this.checkoutForm.get('horaSal');}
+  get cama() { return this.checkoutForm.get('cama');}
   get habitacion() { return this.checkoutForm.get('habitacion');}
   get causa() { return this.checkoutForm.get('causa');}
   //get password() { return this.checkoutForm.get('password'); }
